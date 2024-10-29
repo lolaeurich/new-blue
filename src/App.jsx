@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Home from "./Pages/Home"
+import Home from "./Pages/Home/Home.jsx"
 
 const App = () => {
 
