@@ -11,7 +11,7 @@ import Experience from '../../Components/Experience/Experience';
 import Front from '../../Components/Front/Front';
 import Partners from '../../Components/Partners/Partners';
 
-const Home = () => {
+const Home1 = () => {
     const images = [image1, image2, image3];
 
     return (
@@ -27,4 +27,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Home1;

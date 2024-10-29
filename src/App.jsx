@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Home from "./Pages/Home/Home.jsx"
+import Home1 from "../src/Pages/Home/Home"
 
 const App = () => {
 
@@ -16,7 +16,7 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home1 />} />
     </Routes>
   );
 };
