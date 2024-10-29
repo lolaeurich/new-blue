@@ -1,0 +1,111 @@
+.about {
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0%;
+    margin-top: 15%;
+    margin-left: -8px !important;
+    padding-left: -8px !important;
+    margin-right: -8px !important;
+    padding-right: -8px !important;
+    min-height: 140vh;
+}
+
+.primeira-img {
+    width: 100%;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    top: 25%; 
+    left: 0%; 
+    width: 95%;
+    text-align: end;
+}
+
+.about-text h3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    color: #001B3C;
+    font-size: 40px;
+    margin: 0;
+}
+
+.about-text p {
+    font-family: 'Sora', sans-serif;
+    font-weight: 300;
+    color: #001B3C;
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 5%;
+}
+
+.about-info {
+    position: absolute; /* Permite que o elemento se sobreponha */
+    top: 70%; /* Ajusta para centralizar verticalmente */
+    left: 50%; /* Ajusta para centralizar horizontalmente */
+    transform: translate(-50%, -50%); /* Move o elemento para cima e para a esquerda, centralizando-o */
+    padding: 0%;
+    height: fit-content;
+    background-color: #0B76BB;
+    border-radius: 25px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0; /* Remova a margem para evitar deslocamento */
+    z-index: 1; /* Garante que o conteúdo esteja acima da imagem */
+    padding-bottom: 10%;
+}
+
+.about-text2 {
+    padding: 10%;
+}
+
+.about-text2 h2{
+    color: #fff;
+    font-family: 'Sora', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+.about-text2 p{
+    color: #fff;
+    font-family: 'Sora', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    width: 95%;
+}
+
+.about-text2 button {
+    padding-inline: 5%;
+    height: 44px;
+    color: #fff;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    border: solid 1px #fff;
+    background-color: transparent;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.object {
+    width: 95px;
+    height: 95px;
+    background-color: #00CCFF;
+    border-radius: 25px;
+    position: absolute;
+    top: 84%; /* Ajusta para centralizar verticalmente */
+    left: 68%; /* Ajusta para centralizar horizontalmente */
+    z-index: 2;
+    border: #001B3C solid 7px;
+}
