@@ -1,30 +1,36 @@
-import React, { useState, useEffect } from "react";
 import "./style.css";
-import hero from "../../assets/Hero/hero.png";
-import aya from "../../assets/Hero/aya_logo.png";
-import arrow from "../../assets/Hero/arrow.png";
+import logoAya from "../../assets/Hero/aya.png";
+import { FaArrowRight } from "react-icons/fa";
+import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 function Hero() {
-
-    return (
-        <div className="hero">
-            <img alt="" src={hero}/>
-
-            <div className="hero-info">
-                <div>
-                    <h2>Suítes e homes</h2>
-                    <h3>de 21 a 54 m²</h3>
-                    <p>Rua Emiliano Perneta,</p>
-                    <p>260 - Centro</p>
-
-                    <div className="info-logos">
-                        <img alt="" src={aya}/>
-                        <p>Conheça <img className="info-arrow" alt="" src={arrow}/></p>
-                    </div>
-                </div>    
-            </div>
+  return (
+    <section>
+      <MdArrowBackIos className="arrow left" />
+      <MdArrowForwardIos className="arrow right" />
+      <div className="hero">
+        <div className="vector"></div>
+        <div className="hero-text">
+          <header>
+            <h1>Suítes e homes</h1>
+            <h3>de 21 a 54 m²</h3>
+          </header>
+          <p>Rua Emiliano Perneta, 260 - Centro</p>
+          <footer>
+            <img
+              src={logoAya}
+              alt="logo"
+              style={{ width: "100px", height: "33px" }}
+            />
+            <a>
+              <span>Conheça</span>
+              <FaArrowRight />
+            </a>
+          </footer>
         </div>
-    );
+      </div>
+    </section>
+  );
 }
 
 export default Hero;
