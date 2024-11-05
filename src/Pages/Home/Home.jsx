@@ -16,7 +16,7 @@ const Home1 = () => {
 
   return (
     <div style={{ width: "100%" }}>
-      {/* <Nav /> */}
+      <Nav />
       <Hero />
       {/* <Carousel images={images}/>
             <About />
