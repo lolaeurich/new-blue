@@ -1,73 +1,34 @@
-import React, { useState, useRef } from 'react';
-import './style.css';
-import filter from "../../assets/Carousel/filter.png";
+/* eslint-disable react/prop-types */
+import { useRef } from "react";
+import "./style.css";
 
-const Carousel = ({ images }) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const startX = useRef(0);
-    const isDragging = useRef(false);
+const Carousel = ({ items }) => {
+  const carouselRef = useRef(null);
 
-    const handleTouchStart = (e) => {
-        startX.current = e.touches[0].clientX;
-        isDragging.current = true;
-    };
+  const handleScroll = (direction) => {
+    if (carouselRef.current) {
+      const scrollAmount = carouselRef.current.offsetWidth;
+      carouselRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
-    const handleTouchMove = (e) => {
-        if (!isDragging.current) return;
-        const currentX = e.touches[0].clientX;
-        const diffX = startX.current - currentX;
-
-        if (diffX > 50) {
-            // Swipe left
-            handleNext();
-            isDragging.current = false;
-        } else if (diffX < -50) {
-            // Swipe right
-            handlePrev();
-            isDragging.current = false;
-        }
-    };
-
-    const handleTouchEnd = () => {
-        isDragging.current = false;
-    };
-
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
-
-    return (
-        <div
-            className="carousel"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-        >
-            <h2 className='carousel-titulo'>Projetos <img alt='' src={filter}/></h2>
-            <div className="carousel-container">
-                <div
-                    className="carousel-images"
-                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-                >
-                    {images.map((image, index) => (
-                        <div className="carousel-item" key={index}>
-                            <img src={image} alt={`Slide ${index}`} />
-                        </div>
-                    ))}
-                </div>
-            </div>
-            <div className="progress-bar">
-                <div
-                    className="progress"
-                    style={{ width: `${((currentIndex + 1) / images.length) * 100}%` }}
-                />
-            </div>
-        </div>
-    );
+  return (
+    <div className="carousel-container">
+      <button className="carousel-button left" onClick={() => handleScroll("left")}>{"<"}</button>
+      <div className="carousel" ref={carouselRef}>
+        {items.map((item) => (
+          <div key={item.id} className="carousel-item">
+            <img src={item.img} alt={item.name} className="carousel-image" />
+            <p className="carousel-name">{item.name}</p>
+          </div>
+        ))}
+      </div>
+      <button className="carousel-button right" onClick={() => handleScroll("right")}>{">"}</button>
+    </div>
+  );
 };
 
 export default Carousel;

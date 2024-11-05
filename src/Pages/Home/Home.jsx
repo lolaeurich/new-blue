@@ -12,15 +12,32 @@ import Front from "../../Components/Front/Front";
 import Partners from "../../Components/Partners/Partners";
 
 const Home1 = () => {
-  const images = [image1, image2, image3];
+  const listCarrosel = [
+    {
+      id: 1,
+      name: 'Aya',
+      img: image1,
+    },
+    {
+      id: 2,
+      name: 'Cena',
+      img: image2,
+    },
+    {
+      id: 3,
+      name: 'Hit Home',
+      img: image3,
+    }
+  ];
 
   return (
     <div style={{ width: "100%" }}>
       <Nav />
       <Hero />
-      {/* <Carousel images={images}/>
-            <About />
-            <Experience />
+      <Carousel items={listCarrosel} />
+      {/*     
+      <About />
+       <Experience />
             <Front />
             <Partners /> */}
     </div>
