@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 import Nav from "../../Components/Navbar/Navbar";
 import Hero from "../../Components/Hero/Hero";
@@ -10,6 +9,7 @@ import About from "../../Components/About/About";
 import Experience from "../../Components/Experience/Experience";
 import Front from "../../Components/Front/Front";
 import Partners from "../../Components/Partners/Partners";
+import Notify from "../../Components/Notify/Notify";
 
 const Home1 = () => {
   const listCarrosel = [
@@ -54,6 +54,7 @@ const Home1 = () => {
       <Experience />
       <Front />
       <Partners />
+      <Notify />
     </div>
   );
 };

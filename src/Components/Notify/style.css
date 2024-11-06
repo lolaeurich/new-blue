@@ -1,0 +1,114 @@
+.notify {
+  margin-top: 3rem;
+  color: #fff;
+  background-color: #427fea;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.notify header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notify header button {
+  background-color: transparent;
+  border: solid 1px #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .notify {
+    margin-top: 6rem;
+  }
+}
+
+.notify .carousel-container {
+  display: flex;
+  align-items: center;
+}
+
+.notify .carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px;
+  gap: 16px;
+  margin: 0 auto;
+  scrollbar-width: none;
+}
+
+.notify .carousel-item {
+  width: 265px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 20px;
+}
+
+.notify .carousel-image {
+  width: 200px;
+  height: 78px;
+  margin: 0 auto;
+}
+
+.notify .carousel-title {
+  color: #00183c;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.notify .carousel-description {
+  font-size: 12px;
+  color: #00183c;
+}
+
+.notify .carousel-link {
+  text-decoration: none;
+  color: #063272;
+}
+
+.notify .carousel-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .notify .carousel-button {
+    display: block;
+  }
+}
+
+.notify .progress-bar {
+  margin: 0 auto;
+  width: 90%;
+  height: 2px;
+  background-color: #689dfa;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  margin-top: 0.8rem;
+}
+
+.notify .progress-fill {
+  height: 7px;
+  background-color: #689dfa;
+  transition: width 0.2s ease;
+  border-radius: 6px;
+}
