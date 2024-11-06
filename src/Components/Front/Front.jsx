@@ -1,24 +1,19 @@
-import React from 'react';
 import "./style.css";
 
 const Front = () => {
-
-    return (
-        <div className='front'>
-           <div className="front-info">
-                <div className='front-text2'>
-                    <h2>Conheça as frentes de negócio do Grupo Blue</h2>
-                    <p>Somos uma Holding que atua na gestão de produtos imobiliários através de nossas marcas subsidiárias.</p>
-
-                    <button>Saiba mais</button>  
-                </div>    
-            </div>
-
-            <div className='object2'>
-                
-            </div>
-        </div>
-    );
-}
+  return (
+    <div className="front-img">
+      <div className="front">
+        <h3>Conheça as frentes de negócio do Grupo Blue</h3>
+        <p>
+          Somos uma Holding que atua na gestão de produtos imobiliários através
+          de nossas marcas subsidiás.
+        </p>
+        <button>Saiba mais</button>
+        <div className="front-decorate"></div>
+      </div>
+    </div>
+  );
+};
 
 export default Front;

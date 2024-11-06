@@ -15,34 +15,34 @@ const Home1 = () => {
   const listCarrosel = [
     {
       id: 1,
-      name: 'Aya',
+      name: "Aya",
       img: image1,
     },
     {
       id: 2,
-      name: 'Cena',
+      name: "Cena",
       img: image2,
     },
     {
       id: 3,
-      name: 'Hit Home',
+      name: "Hit Home",
       img: image3,
     },
     {
       id: 4,
-      name: 'Aya',
+      name: "Aya",
       img: image1,
     },
     {
       id: 5,
-      name: 'Cena',
+      name: "Cena",
       img: image2,
     },
     {
       id: 6,
-      name: 'Hit Home',
+      name: "Hit Home",
       img: image3,
-    }
+    },
   ];
 
   return (
@@ -51,9 +51,9 @@ const Home1 = () => {
       <Hero />
       <Carousel items={listCarrosel} />
       <About />
-       <Experience />
+      <Experience />
+      <Front />
       {/*     
-            <Front />
             <Partners /> */}
     </div>
   );

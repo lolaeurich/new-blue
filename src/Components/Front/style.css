@@ -1,75 +1,82 @@
+.front-img {
+  width: 100%;
+  height: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .front-img {
+    background-image: url(../../assets/Front/front.png);
+    justify-content: end;
+    align-items: end;
+    height: 557px;
+  }
+}
+
 .front {
-    position: relative;
-    overflow: hidden;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5%;
-    margin-top: 0%;
-    height: 50vh;
+  width: 80%;
+  height: 100%;
+  background-color: #0b76bb;
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 25px;
+  height: 300px;
+  color: #fff;
 }
 
-.front-info {
-    position: absolute; /* Permite que o elemento se sobreponha */
-    top: 45%; /* Ajusta para centralizar verticalmente */
-    left: 50%; /* Ajusta para centralizar horizontalmente */
-    transform: translate(-50%, -50%); /* Move o elemento para cima e para a esquerda, centralizando-o */
-    padding: 0%;
-    height: fit-content;
-    background-color: #0B76BB;
-    border-radius: 25px;
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0; /* Remova a margem para evitar deslocamento */
-    z-index: 1; /* Garante que o conteúdo esteja acima da imagem */
-    padding-bottom: 10%;
+@media screen and (min-width: 768px) {
+  .front {
+    height: 300px;
+    width: 350px;
+    margin: auto 0;
+    margin-right: 10%;
+    background-color: #0b75bbda;
+  }
 }
 
-.front-text2 {
-    padding: 10%;
+.front h3 {
+    font-weight: bolder;
+    font-size: 1.5rem;
+    max-width: 277px;
 }
 
-.front-text2 h2{
-    color: #fff;
-    font-family: 'Sora', sans-serif;
+.front p {
     font-weight: 300;
-    font-size: 28px;
+    margin: 0;
+    max-width: 277px;
 }
 
-.front-text2 p{
-    color: #fff;
-    font-family: 'Sora', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    width: 95%;
-}
-
-.front-text2 button {
-    padding-inline: 5%;
-    height: 44px;
-    color: #fff;
-    font-family: 'Sora', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    border: solid 1px #fff;
+.front button {
+    padding: 10px 20px;
+    border: #fff solid 2px;
     background-color: transparent;
-    border-radius: 9px;
-    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.object2 {
-    width: 95px;
-    height: 95px;
-    background-color: #00CCFF;
-    border-radius: 25px;
-    position: absolute;
-    top: 68%; /* Ajusta para centralizar verticalmente */
-    left: 68%; /* Ajusta para centralizar horizontalmente */
-    z-index: 2;
-    border: #001B3C solid 7px;
+.front-decorate {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  bottom: 0;
+  right: 0;
+  border: #001638 solid 7px;
+  background-color: #00CCFF;
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .front-decorate {
+    border: #5b5c5ecc solid 7px;
+  }
 }
