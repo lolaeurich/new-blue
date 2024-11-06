@@ -1,3 +1,22 @@
+section {
+  margin-top: 3rem;
+  color: #fff;
+}
+
+section header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    margin-top: 6rem;
+  }
+}
+
 .carousel-container {
   position: relative;
   display: flex;
@@ -10,10 +29,11 @@
   scroll-behavior: smooth;
   padding: 10px;
   gap: 16px;
+  margin: 0 auto;
 }
 
 .carousel-item {
-  min-width: 200px;
+  min-width: 225px;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -37,10 +57,17 @@
 }
 
 .carousel-button {
+  display: none;
   background-color: transparent;
   border: none;
   color: white;
   font-size: 24px;
   cursor: pointer;
   padding: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-button {
+    display: block;
+  }
 }
