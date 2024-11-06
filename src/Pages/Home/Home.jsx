@@ -53,8 +53,7 @@ const Home1 = () => {
       <About />
       <Experience />
       <Front />
-      {/*     
-            <Partners /> */}
+      <Partners />
     </div>
   );
 };
