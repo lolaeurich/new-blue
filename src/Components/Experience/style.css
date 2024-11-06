@@ -1,14 +1,16 @@
 .experience {
-    position: relative;
-    overflow: hidden;
-    height: fit-content;
+    margin-top: 20rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding: 5%;
-    margin-top: 0%;
-    height: fit-content;
+}
+
+@media screen and (min-width: 768px) {
+    .experience {
+        margin-top: 5rem;
+    }
 }
 
 .experience-text {
@@ -16,11 +18,28 @@
     flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+    .experience-text {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .experience-text .container {
+        max-width: 455px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .experience-text h2 {
-    font-family: 'Sora', sans-serif;
-    font-weight: 700;
+    font-weight: lighter;
     color: #fff;
-    font-size: 32px;
+    font-size: 2rem;
     margin: 0;
 }
 
@@ -39,6 +58,17 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .experience-text ul {
+        width: fit-content;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: end;
+        max-width: 50%;
+    }
 }
 
 .experience-text ul li {
@@ -48,4 +78,10 @@
     display: flex;
     width: 100%;
     column-gap: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .experience-text ul li {
+        width: 312px;
+    }
 }
