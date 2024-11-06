@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./style.css";
 import { GiSettingsKnobs } from "react-icons/gi";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Carousel = ({ items }) => {
   const carouselRef = useRef(null);
+  const [progress, setProgress] = useState(0);
 
   const handleScroll = (direction) => {
     if (carouselRef.current) {
@@ -16,6 +17,27 @@ const Carousel = ({ items }) => {
       });
     }
   };
+
+  const updateProgress = () => {
+    if (carouselRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
+      const maxScrollLeft = scrollWidth - clientWidth;
+      const newProgress = (scrollLeft / maxScrollLeft) * 100;
+      setProgress(newProgress);
+    }
+  };
+
+  useEffect(() => {
+    const carouselElement = carouselRef.current;
+    if (carouselElement) {
+      carouselElement.addEventListener("scroll", updateProgress);
+      updateProgress();
+
+      return () => {
+        carouselElement.removeEventListener("scroll", updateProgress);
+      };
+    }
+  }, []);
 
   return (
     <section>
@@ -45,6 +67,12 @@ const Carousel = ({ items }) => {
           <IoIosArrowForward />
         </button>
       </div>
+        <div className="progress-bar">
+          <div
+            className="progress-fill"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
     </section>
   );
 };

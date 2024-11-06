@@ -30,6 +30,7 @@ section header {
   padding: 10px;
   gap: 16px;
   margin: 0 auto;
+  scrollbar-width: none;
 }
 
 .carousel-item {
@@ -70,4 +71,22 @@ section header {
   .carousel-button {
     display: block;
   }
+}
+
+.progress-bar {
+  margin: 0 auto;
+  width: 90%;
+  height: 2px;
+  background-color: #062C66;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  margin-top: 0.8rem;
+}
+
+.progress-fill {
+  height: 7px;
+  background-color: #062C66;
+  transition: width 0.2s ease;
+  border-radius: 6px;
 }

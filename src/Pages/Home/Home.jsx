@@ -27,6 +27,21 @@ const Home1 = () => {
       id: 3,
       name: 'Hit Home',
       img: image3,
+    },
+    {
+      id: 4,
+      name: 'Aya',
+      img: image1,
+    },
+    {
+      id: 5,
+      name: 'Cena',
+      img: image2,
+    },
+    {
+      id: 6,
+      name: 'Hit Home',
+      img: image3,
     }
   ];
 
