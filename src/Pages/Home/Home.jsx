@@ -50,9 +50,9 @@ const Home1 = () => {
       <Nav />
       <Hero />
       <Carousel items={listCarrosel} />
-      {/*     
       <About />
        <Experience />
+      {/*     
             <Front />
             <Partners /> */}
     </div>

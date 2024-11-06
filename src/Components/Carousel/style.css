@@ -1,9 +1,9 @@
-section {
+main {
   margin-top: 3rem;
   color: #fff;
 }
 
-section header {
+main header {
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -12,7 +12,7 @@ section header {
 }
 
 @media screen and (min-width: 768px) {
-  .section {
+  .main {
     margin-top: 6rem;
   }
 }

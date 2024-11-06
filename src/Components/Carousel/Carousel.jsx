@@ -40,7 +40,7 @@ const Carousel = ({ items }) => {
   }, []);
 
   return (
-    <section>
+    <main>
       <header>
         <p>Projetos</p>
         <GiSettingsKnobs style={{ rotate: "90deg" }} />
@@ -73,7 +73,7 @@ const Carousel = ({ items }) => {
             style={{ width: `${progress}%` }}
           ></div>
         </div>
-    </section>
+    </main>
   );
 };
 
