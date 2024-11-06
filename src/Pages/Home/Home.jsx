@@ -10,6 +10,7 @@ import Experience from "../../Components/Experience/Experience";
 import Front from "../../Components/Front/Front";
 import Partners from "../../Components/Partners/Partners";
 import Notify from "../../Components/Notify/Notify";
+import Footer from "../../Components/Footer/Footer";
 
 const Home1 = () => {
   const listCarrosel = [
@@ -55,6 +56,7 @@ const Home1 = () => {
       <Front />
       <Partners />
       <Notify />
+      <Footer />
     </div>
   );
 };
