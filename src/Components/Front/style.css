@@ -44,7 +44,6 @@
 }
 
 .front h3 {
-    font-weight: bolder;
     font-size: 1.5rem;
     max-width: 277px;
 }
@@ -78,5 +77,90 @@
 @media screen and (min-width: 768px) {
   .front-decorate {
     border: #5b5c5ecc solid 7px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .front {
+    height: 350px;
+    width: 30%;
+    margin: auto 0;
+    margin-right: 10%;
+    background-color: transparent;
+    background-image: url(/src/assets/element2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0% 0% 0%;
+  }
+
+  .front-decorate {
+    display: none;
+  }
+
+  .front h3,
+  .front p {
+    font-weight: 400;
+    text-align: right; /* Garante que o texto fique alinhado à direita */
+  }
+
+  .front p {
+    margin-right: 10%;
+    font-weight: 300 !important;
+  }
+
+  .front button {
+    align-self: flex-end; /* Garante que o botão vá para a direita */
+    margin-top: 10px; /* Adiciona espaçamento caso necessário */
+    margin-right: 17%;
+  }
+}
+
+
+@media screen and (min-width: 1300px) {
+  
+  .front button {
+    margin-right: 20%;
+  }
+}
+
+
+@media screen and (min-width: 1400px) {
+  
+  .front button {
+    margin-right: 23%;
+  }
+}
+
+
+@media screen and (min-width: 1500px) {
+  
+  .front button {
+    margin-right: 25%;
+  }
+}
+
+
+@media screen and (min-width: 1600px) {
+  
+  .front button {
+    margin-right: 27%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  
+  .front button {
+    margin-right: 29%;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  
+  .front button {
+    margin-right: 31%;
   }
 }

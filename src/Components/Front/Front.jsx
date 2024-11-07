@@ -4,7 +4,11 @@ const Front = () => {
   return (
     <div className="front-img">
       <div className="front">
-        <h3>Conheça as frentes de negócio do Grupo Blue</h3>
+        <h3>Conheça as 
+          <br/>
+          <span style={{fontWeight: "bold"}}>frentes de negócio</span> 
+          <br/>
+          do Grupo Blue</h3>
         <p>
           Somos uma Holding que atua na gestão de produtos imobiliários através
           de nossas marcas subsidiás.

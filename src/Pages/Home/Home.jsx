@@ -26,7 +26,7 @@ const Home1 = () => {
     },
     {
       id: 3,
-      name: "Hit Home",
+      name: "",
       img: image3,
     },
     {
@@ -41,7 +41,7 @@ const Home1 = () => {
     },
     {
       id: 6,
-      name: "Hit Home",
+      name: "",
       img: image3,
     },
   ];

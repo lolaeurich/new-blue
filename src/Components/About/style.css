@@ -64,6 +64,23 @@
   .about-details2 {
     width: 450px;
   }
+
+  .about-details2 {
+    display: none;
+    background-image: url(/src/assets/element.png);
+    border-radius: 25px;
+    padding: 25px;
+    width: full;
+    height: 351px;
+    position: relative;
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .decorate {
+    display: none;
+  }
 }
 
 .decorate {

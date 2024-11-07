@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Home1 from "../src/Pages/Home/Home"
+import NaMidia from './Pages/NaMidia/NaMidia';
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home1 />} />
+      <Route path="/naMidia" element={<NaMidia />} />
     </Routes>
   );
 };

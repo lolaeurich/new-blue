@@ -15,6 +15,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-around;
+    padding: 0rem;
   }
 }
 
@@ -79,6 +80,18 @@
   .navigation a {
     font-size: 0.8rem;
   }
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    padding-left: 5%;
+  }
+
+  .navigation {
+    padding-left: 5%;
+  }
+
+  
 }
 
 .newsletter {

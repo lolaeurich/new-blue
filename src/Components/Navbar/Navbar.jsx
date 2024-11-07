@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./style.css";
 import logo from "../../assets/logo.png";
+import navicon from "../../assets/Front/restrita.png"
 import { useNavigate } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -22,6 +23,10 @@ function Nav() {
 
   const handleHome = () => {
     navigate("/");
+  };
+
+  const handleNaMidia = () => {
+    navigate("/naMidia");
   };
 
   const toggleEmpreendimentos = () => {
@@ -59,12 +64,12 @@ function Nav() {
           <ul className="desktop-menu-list">
             <li>Sobre Nós</li>
             <li>Nossos Negócios</li>
-            <li>Na Mídia</li>
+            <li onClick={handleNaMidia}>Na Mídia</li>
             <li>Blue Social</li>
             <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
             <li>Quero ser um parceiro</li>
             <li className="sociais">
-              <button className="parceiro-btn">Área restrita</button>
+              <button className="parceiro-btn"><img alt="" src={navicon}/>Área restrita</button>
             </li>
           </ul>
         </div>
@@ -77,13 +82,13 @@ function Nav() {
             <ul className="dropdown-list">
               <li>Sobre Nós</li>
               <li>Nossos Negócios</li>
-              <li>Na Mídia</li>
+              <li onClick={handleNaMidia}>Na Mídia</li>
               <li>Blue Social</li>
               <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
               <li>Quero ser um parceiro</li>
             </ul>
             <div className="sociais">
-              <button className="parceiro-btn">Área restrita</button>
+              <button className="parceiro-btn"><img alt="" src={navicon}/>Área restrita</button>
             </div>
           </div>
         )}

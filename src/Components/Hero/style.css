@@ -119,6 +119,7 @@ section {
   .hero .hero-text {
     bottom: -1rem;
     width: 40%;
+    max-width: 25%;
     left: -1rem;
     border: #00183c solid 17px;
   }
