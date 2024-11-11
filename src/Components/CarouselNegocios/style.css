@@ -1,0 +1,122 @@
+.negocios-carousel {
+  height: 90vh;
+  margin-top: 0px;
+}
+
+.negocios-h2 {
+  font-size: 2.5rem;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Garante que apenas os 2 primeiros cards sejam visíveis */
+}
+
+.carousel {
+  display: flex;
+  gap: 20px; /* Adiciona espaço entre os cards */
+  scroll-behavior: smooth;
+  padding-inline: 5%;
+  transition: transform 0.3s ease-in-out; /* Desloca suavemente os itens */
+}
+
+.carousel-item {
+  flex-shrink: 0; /* Impede que os itens encolham */
+  width: 50%; /* Ajusta a largura para exibir 2 itens por vez */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras para destacar */
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Botões de navegação */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.carousel-button.left {
+  left: 10px;
+}
+
+.carousel-button.right {
+  right: 10px;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #333;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #58FFC3;
+  transition: width 0.25s;
+}
+
+@media screen and (min-width: 1200px) {
+  .negocios-carousel {
+    height: 95vh;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .negocios-carousel {
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .negocios-carousel {
+    height: 105vh;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .negocios-carousel {
+    height: 110vh;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .negocios-carousel {
+    height: 115vh;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .negocios-carousel {
+    height: 120vh;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .negocios-carousel {
+    height: 125vh;
+  }
+}
+
+

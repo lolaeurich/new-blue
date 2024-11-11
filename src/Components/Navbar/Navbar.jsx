@@ -37,6 +37,10 @@ function Nav() {
     navigate("/catalogo");
   };
 
+  const handleNossosNegocios = () => {
+    navigate("/nossosNegocios");
+  };
+
   const toggleEmpreendimentos = () => {
     setIsEmpreendimentosOpen(!isEmpreendimentosOpen);
   };
@@ -71,7 +75,7 @@ function Nav() {
         <div className="nav-menu-desktop">
           <ul className="desktop-menu-list">
             <li>Sobre Nós</li>
-            <li>Nossos Negócios</li>
+            <li onClick={handleNossosNegocios}>Nossos Negócios</li>
             <li onClick={handleNaMidia}>Na Mídia</li>
             <li onClick={handleSocial}>Blue Social</li>
             <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
@@ -89,7 +93,7 @@ function Nav() {
             </button>
             <ul className="dropdown-list">
               <li>Sobre Nós</li>
-              <li>Nossos Negócios</li>
+              <li onClick={handleNossosNegocios}>Nossos Negócios</li>
               <li onClick={handleNaMidia}>Na Mídia</li>
               <li onClick={handleSocial}>Blue Social</li>
               <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
