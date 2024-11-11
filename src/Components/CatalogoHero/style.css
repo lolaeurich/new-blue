@@ -1,0 +1,138 @@
+.section-catalogo {
+    padding: 0 10px;
+    margin-top: 120px;
+    position: relative;
+    height: auto !important;
+}
+
+.catalogo-hero {
+    width: 100%;
+    height: 50vh; /* Ou ajuste conforme necessário para a altura desejada */
+    background-image: url("../../assets/catalogo.png");
+    background-size: cover; /* A imagem irá cobrir o espaço disponível */
+    background-position: center center; /* Certifica-se de que a imagem fique centralizada */
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinha o conteúdo no fundo da imagem */
+    border-radius: 30px;
+    position: relative;
+}
+
+
+.catalogo-hero-texto {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima do gradiente e imagem */
+    text-align: center;
+    color: #00183C;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+}
+
+.catalogo-hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Sora', sans-serif;
+    color: #0B76BB;
+    font-weight: 400;
+}
+
+.catalogo-hero span {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: 'Sora', sans-serif;
+    color: #00183C;
+    font-weight: 700;
+}
+
+.catalogo-hero p {
+    font-size: 1rem;
+    font-family: 'Sora', sans-serif;
+    color: #0B76BB;
+    font-weight: 400;
+}
+
+.whats {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 2%;
+    height: 7vh;
+}
+
+.whats img {
+    width: 46px;
+    height: 44px;
+}
+
+.whats p {
+    font-size: 2.3rem;
+    font-family: 'Sora', sans-serif;
+    color: #00183C;
+    font-weight: 700;
+}
+
+
+@media (min-width: 1024px) {
+    .catalogo-hero {
+        width: 92%;
+        height: 48vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+    .catalogo-hero-texto {
+        text-align: left;
+        align-self: center;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .catalogo-hero {
+        height: 55vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}
+
+@media (min-width: 1200px) {
+    .catalogo-hero {
+        height: 60vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}
+
+@media (min-width: 1300px) {
+    .catalogo-hero {
+        height: 65vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}
+
+@media (min-width: 1400px) {
+    .catalogo-hero {
+        height: 70vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}
+
+@media (min-width: 1500px) {
+    .catalogo-hero {
+        height: 75vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}
+
+@media (min-width: 1600px) {
+    .catalogo-hero {
+        height: 80vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}
+
+@media (min-width: 1700px) {
+    .catalogo-hero {
+        height: 85vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}
+
+@media (min-width: 1800px) {
+    .catalogo-hero {
+        height: 90vh; /* Ajuste a altura em telas maiores, se necessário */
+    }
+}

@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home1 from "../src/Pages/Home/Home"
 import NaMidia from './Pages/NaMidia/NaMidia';
 import Social from './Pages/Social/Social';
+import Catalogo from './Pages/Catalogo/Catalogo';
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
       <Route path="/" element={<Home1 />} />
       <Route path="/naMidia" element={<NaMidia />} />
       <Route path="/blueSocial" element={<Social />} />
+      <Route path="/catalogo" element={<Catalogo />} />
     </Routes>
   );
 };

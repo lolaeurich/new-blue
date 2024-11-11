@@ -33,6 +33,10 @@ function Nav() {
     navigate("/blueSocial");
   };
 
+  const handleCatalogo = () => {
+    navigate("/catalogo");
+  };
+
   const toggleEmpreendimentos = () => {
     setIsEmpreendimentosOpen(!isEmpreendimentosOpen);
   };
@@ -101,7 +105,7 @@ function Nav() {
           <div ref={empreendimentosRef} className="empreendimentos-dropdown">
             <div className="view-projects-all">
               <h3>Conheça os nossos lançamentos</h3>
-              <button className="projects-btn">
+              <button className="projects-btn" onClick={handleCatalogo}>
                 Ver todos os projetos <FaArrowRight />
               </button>
             </div>

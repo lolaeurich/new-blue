@@ -1,0 +1,225 @@
+/* Filtros */
+.filters {
+    display: flex;
+    padding-inline: 4%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    font-family: 'Sora', sans-serif;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Envolvimento do select e ícone */
+.select-wrapper {
+    position: relative;  /* Necessário para posicionar o ícone */
+    width: 100%;         /* Assegura que o select ocupe toda a largura */
+}
+
+.filter-item select {
+    border: solid 1px #58FFC3;
+    border-radius: 10px;
+    width: 255px;  /* Tamanho do select */
+    height: 47px;
+    background-color: transparent;
+    color: #fff;
+    padding-inline: 10%; /* Espaçamento adicional para o ícone */
+    appearance: none;  /* Remove a seta padrão */
+    font-family: 'Sora', sans-serif;  /* Fonte para o texto do select */
+}
+
+.filter-item select option {
+    color: #fff;
+    background-color: #00183C;
+}
+
+/* Estilo do ícone */
+.custom-select-icon {
+    position: relative;
+    right: 0px;
+    left: 182px;
+    top: -28px;
+    transform: translateY(-15%);
+    font-size: 20px;
+    color: #fff;
+    width: 10px;
+}
+
+/* Cards */
+.catalogo-cards {
+    margin-top: 3rem;
+    color: #fff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.catalogo-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+}
+
+.catalogo-card {
+    width: 100%; 
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: transparent; 
+}
+
+.catalogo-card-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .catalogo-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 480px) {
+    .catalogo-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .filter-item select {
+        border: solid 1px #58FFC3;
+        border-radius: 10px;
+        width: 185px;
+        height: 47px;
+        background-color: transparent;
+        color: #fff ;
+    }
+
+    .custom-select-icon {
+        left: 167px;
+    }
+
+    .catalogo-container {
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10%;
+        grid-template-rows: repeat(4, auto); 
+        overflow-y: auto; 
+        width: 92%;
+        margin: 0 auto; 
+        column-gap: 2%;
+        justify-items: center;
+    }
+
+    .catalogo-card {
+        background-color: transparent; 
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: start;
+        width: 100%; 
+    }
+
+    .catalogo-card-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .filter-item select {
+        width: 200px;
+    }
+
+    .custom-select-icon {
+        left: 173px;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .filter-item select {
+        width: 220px;
+    }
+
+    .custom-select-icon {
+        left: 190px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .filter-item select {
+        width: 240px;
+    }
+
+    .custom-select-icon {
+        left: 210px;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    .filter-item select {
+        width: 260px;
+    }
+
+    .custom-select-icon {
+        left: 230px;
+    }
+}
+
+@media (min-width: 1600px) {
+
+    .filter-item select {
+        width: 280px;
+    }
+
+    .custom-select-icon {
+        left: 250px;
+    }
+}
+
+@media (min-width: 1700px) {
+
+    .filter-item select {
+        width: 300px;
+    }
+
+    .custom-select-icon {
+        left: 270px;
+    }
+}
+
+@media (min-width: 1800px) {
+
+    .filter-item select {
+        width: 320px;
+    }
+
+    .custom-select-icon {
+        left: 290px;
+    }
+}
