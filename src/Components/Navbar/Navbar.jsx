@@ -29,6 +29,10 @@ function Nav() {
     navigate("/naMidia");
   };
 
+  const handleSocial = () => {
+    navigate("/blueSocial");
+  };
+
   const toggleEmpreendimentos = () => {
     setIsEmpreendimentosOpen(!isEmpreendimentosOpen);
   };
@@ -65,7 +69,7 @@ function Nav() {
             <li>Sobre Nós</li>
             <li>Nossos Negócios</li>
             <li onClick={handleNaMidia}>Na Mídia</li>
-            <li>Blue Social</li>
+            <li onClick={handleSocial}>Blue Social</li>
             <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
             <li>Quero ser um parceiro</li>
             <li className="sociais">
@@ -83,7 +87,7 @@ function Nav() {
               <li>Sobre Nós</li>
               <li>Nossos Negócios</li>
               <li onClick={handleNaMidia}>Na Mídia</li>
-              <li>Blue Social</li>
+              <li onClick={handleSocial}>Blue Social</li>
               <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
               <li>Quero ser um parceiro</li>
             </ul>

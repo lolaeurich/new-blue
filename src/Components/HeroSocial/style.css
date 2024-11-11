@@ -1,0 +1,112 @@
+.section-social {
+    padding: 0 10px;
+    margin-top: 120px;
+    position: relative;
+    height: 60vh !important;
+    background-image: url(/src/assets/bg.png);
+    background-size: auto; /* Mantém o tamanho da imagem original */
+    background-position: -10%;
+    background-repeat: no-repeat;
+}
+
+.social-hero {
+    width: 90%;
+    height: 250px;  
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha o conteúdo no fundo da imagem */
+    border-radius: 30px;
+    position: relative;
+}
+
+
+.social-hero-texto {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique acima do gradiente e imagem */
+    text-align: left;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.social-hero-texto h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'Sora', sans-serif;
+    color: #fff;
+}
+
+.social-hero-texto p {
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Sora', sans-serif;
+    color: #fff;
+}
+
+.social-hero img {
+    width: 60%;
+    height: 45vh;
+}
+
+@media (min-width: 1200px) {
+    .social-hero {
+        width: 90%;
+        height: auto;
+    }
+
+    .social-hero-texto {
+        text-align: left;
+        align-self: center;
+        width: 85%;
+        padding: 74px 20px 20px 20px;
+    }
+
+    .social-hero-texto h2 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        font-family: 'Sora', sans-serif;
+        color: #fff;
+    }
+
+    .social-hero-texto p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Sora', sans-serif;
+        color: #fff;
+        line-height: 20px;
+    }
+
+    .social-hero img {
+        height: 52vh;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .section-social {
+        height: 65vh !important;
+    }
+
+    .social-hero img {
+        height: 60vh;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .section-social {
+        height: 65vh !important;
+    }
+
+    .social-hero img {
+        height: 55vh;
+        padding-top: 2%;
+    }
+
+    .social-hero-texto {
+        padding: 74px 20px 20px 75px;
+    }
+}
+
