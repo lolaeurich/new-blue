@@ -4,75 +4,81 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import negocios1 from "../../assets/negocios1.png";
 import negocios2 from "../../assets/negocios2.png";
 
-
 const CarouselNegocios = () => {
   const carouselRef = useRef(null);
-  const [progress, setProgress] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // Controle de qual item está ativo
 
-  const handleScroll = (direction) => {
-    if (carouselRef.current) {
-      const scrollAmount = carouselRef.current.offsetWidth;
-      carouselRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const updateProgress = () => {
-    if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      const maxScrollLeft = scrollWidth - clientWidth;
-      const newProgress = (scrollLeft / maxScrollLeft) * 100;
-      setProgress(newProgress);
-    }
-  };
-
-  useEffect(() => {
-    const carouselElement = carouselRef.current;
-    if (carouselElement) {
-      carouselElement.addEventListener("scroll", updateProgress);
-      updateProgress();
-
-      return () => {
-        carouselElement.removeEventListener("scroll", updateProgress);
-      };
-    }
-  }, []);
-
-  // Definir imagens e nomes diretamente no código
+  // Itens do carrossel
   const items = [
-    { id: 1, img: negocios1,},
-    { id: 2, img: negocios2},
+    { id: 1, img: negocios1 },
+    { id: 2, img: negocios2 },
     { id: 3, img: negocios1 },
   ];
 
+  // Função para controlar a navegação do carrossel
+  const handleScroll = (direction) => {
+    let newIndex = activeIndex;
+    if (direction === "left") {
+      newIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    } else if (direction === "right") {
+      newIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    }
+    setActiveIndex(newIndex);
+  };
+
+  // Efeito para rolar o carrossel para o item ativo
+  useEffect(() => {
+    if (carouselRef.current) {
+      const activeItem = carouselRef.current.children[activeIndex];
+      if (activeItem) {
+        activeItem.scrollIntoView({ behavior: "smooth", inline: "center" });
+      }
+    }
+  }, [activeIndex]);
+
+  // Função para renderizar os pontos (dots)
+  const renderDots = () => {
+    return items.map((_, index) => (
+      <div
+        key={index}
+        className={`dot ${index === activeIndex ? "active" : ""}`}
+      />
+    ));
+  };
+
   return (
     <main className="negocios-carousel">
-        <h2 className="negocios-h2">Conheça alguns projetos do Grupo Blue</h2>
-      <div className="carousel-container">
+      <h2 className="negocios-h2">Conheça alguns projetos do Grupo Blue</h2>
+      <div className="neg-carousel-container">
         <button
-          className="carousel-button left"
+          className="neg-carousel-button left"
           onClick={() => handleScroll("left")}
         >
           <IoIosArrowBack />
         </button>
-        <div className="carousel" ref={carouselRef}>
-          {items.map((item) => (
-            <div key={item.id} className="carousel-item">
-              <img src={item.img} alt={item.name} className="carousel-image" />
+        <div className="neg-carousel" ref={carouselRef}>
+          {items.map((item, index) => (
+            <div
+              key={item.id}
+              className={`neg-carousel-item ${index === activeIndex ? "active" : ""}`}
+            >
+              <img
+                src={item.img}
+                alt={`Imagem ${item.id}`}
+                className="neg-carousel-image"
+              />
             </div>
           ))}
         </div>
         <button
-          className="carousel-button right"
+          className="neg-carousel-button right"
           onClick={() => handleScroll("right")}
         >
           <IoIosArrowForward />
         </button>
       </div>
-      <div className="progress-bar">
-        <div className="progress-fill" style={{ width: `${progress}%` }}></div>
+      <div className="neg-dots-container">
+        {renderDots()}
       </div>
     </main>
   );
