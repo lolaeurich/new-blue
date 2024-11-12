@@ -15,15 +15,16 @@ function Hero() {
             <h1>Suítes e homes</h1>
             <h3>de 21 a 54 m²</h3>
           </header>
-          <p>Rua Emiliano Perneta, 260 - Centro</p>
+          <p>Rua Emiliano Perneta,
+            <br/>
+             260 - Centro</p>
           <footer>
             <img
               src={logoAya}
               alt="logo"
-              style={{ width: "100px", height: "33px" }}
             />
             <a>
-              <span>Conheça</span>
+              <span style={{cursor: "pointer"}}>Conheça</span>
               <FaArrowRight />
             </a>
           </footer>

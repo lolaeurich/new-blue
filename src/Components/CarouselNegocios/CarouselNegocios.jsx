@@ -12,7 +12,6 @@ const CarouselNegocios = () => {
   const items = [
     { id: 1, img: negocios1 },
     { id: 2, img: negocios2 },
-    { id: 3, img: negocios1 },
   ];
 
   // Função para controlar a navegação do carrossel

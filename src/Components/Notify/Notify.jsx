@@ -1,11 +1,16 @@
 import "./style.css";
-import { useRef, useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import image from "../../assets/Notify/notify.png";
+import { useNavigate } from "react-router-dom";
 
 const Notify = () => {
-  const carouselRef = useRef(null);
-  const [progress, setProgress] = useState(0);
+
+  const navigate = useNavigate();
+
+  const handleNaMidia = () => {
+    navigate("/naMidia");
+  };
+
   const items = [
     {
       id: 1,
@@ -16,97 +21,41 @@ const Notify = () => {
     },
     {
       id: 2,
-      title: "5 dicas para investir em imóveis",
+      title: "Moradia econômica no Brasil",
       img: image,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
     },
     {
-      id: 2,
-      title: "5 dicas para investir em imóveis",
-      img: image,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
-    },
-    {
-      id: 2,
-      title: "5 dicas para investir em imóveis",
-      img: image,
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
-    },
-    {
-      id: 2,
-      title: "5 dicas para investir em imóveis",
+      id: 3,
+      title: "5 estratégias inovadoras",
       img: image,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
     },
   ];
 
-  const handleScroll = (direction) => {
-    if (carouselRef.current) {
-      const scrollAmount = carouselRef.current.offsetWidth;
-      carouselRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const updateProgress = () => {
-    if (carouselRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-      const maxScrollLeft = scrollWidth - clientWidth;
-      const newProgress = (scrollLeft / maxScrollLeft) * 100;
-      setProgress(newProgress);
-    }
-  };
-
-  useEffect(() => {
-    const carouselElement = carouselRef.current;
-    if (carouselElement) {
-      carouselElement.addEventListener("scroll", updateProgress);
-      updateProgress();
-
-      return () => {
-        carouselElement.removeEventListener("scroll", updateProgress);
-      };
-    }
-  }, []);
-
   return (
     <main className="notify">
       <header>
         <p>Blue na mídia</p>
-        <button>
+        <button onClick={handleNaMidia}>
           Ver mais notícias <FaArrowRight />
         </button>
       </header>
-      <div className="carousel-container">
-        <button
-          className="carousel-button left"
-          onClick={() => handleScroll("left")}
-        ></button>
-        <div className="carousel" ref={carouselRef}>
-          {items.map((item) => (
-            <div key={item.id} className="carousel-item">
-              <img src={item.img} alt={item.name} className="carousel-image" />
-              <h3 className="carousel-title">{item.title}</h3>
-              <p className="carousel-description">{item.description}</p>
-              <a href="#" className="carousel-link">
-                Ver notícia <FaArrowRight />
-              </a>
-            </div>
-          ))}
-        </div>
-        <button
-          className="carousel-button right"
-          onClick={() => handleScroll("right")}
-        ></button>
-      </div>
-      <div className="progress-bar">
-        <div className="progress-fill" style={{ width: `${progress}%` }}></div>
+
+      {/* Exibe os 3 primeiros itens estáticos em telas maiores que 1024px */}
+      <div className="news-container">
+        {items.slice(0, 3).map((item) => (
+          <div key={item.id} className="news-item">
+            <img src={item.img} alt={item.title} className="news-image" />
+            <h3 className="news-title">{item.title}</h3>
+            <p className="news-description">{item.description}</p>
+            <a href="#" className="news-link">
+              Ver notícia <FaArrowRight />
+            </a>
+          </div>
+        ))}
       </div>
     </main>
   );

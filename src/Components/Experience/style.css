@@ -71,6 +71,28 @@
     }
 }
 
+/* A partir de 1024px, quebrar a lista em duas colunas */
+@media screen and (min-width: 1024px) {
+    .experience-text ul {
+        column-count: 2; /* Quebra a lista em duas colunas */
+        column-gap: 2rem; /* Espaçamento entre as colunas */
+        width: 100%;
+    }
+
+    .experience-text ul li {
+        display: flex;
+        align-items: center; /* Alinha o ícone e o texto */
+        margin-bottom: 1.5rem; /* Espaçamento entre os itens */
+        font-size: 20px;
+    }
+
+    .experience-text ul li img {
+        margin-right: 10px; /* Adiciona espaço entre a imagem e o texto */
+        width: 25px; /* Ajusta o tamanho das imagens */
+        height: auto;
+    }
+}
+
 .experience-text ul li {
     color: #fff;
     padding-bottom: 10%;
@@ -84,4 +106,29 @@
     .experience-text ul li {
         width: 312px;
     }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .experience-text ul {
+        display: block;
+        column-count: 2;
+        column-gap: 2rem;
+        width: 55%;
+    }
+        .experience-text ul li {
+            font-size: 1.2rem;
+            column-gap: 1%;
+        }
+
+        .experience-text p {
+            line-height: 30px;
+            font-family: 'Sora', sans-serif;
+            font-weight: 300;
+            color: #fff;
+            font-size: 18px;
+            margin: 0;
+            padding-top: 5%;
+            padding-bottom: 15% !important;
+        }
 }

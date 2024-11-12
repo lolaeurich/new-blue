@@ -2,8 +2,8 @@ import "./style.css";
 
 const FrontSocial = () => {
   return (
-    <div className="front-img">
-      <div className="front">
+    <div className="social-front-img">
+      <div className="social-front">
         <h3>
           <span style={{fontWeight: "bold"}}>O que fazemos</span> 
         </h3>

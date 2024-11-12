@@ -1,16 +1,23 @@
 /* eslint-disable react/prop-types */
 import { useRef, useState, useEffect } from "react";
 import "./style.css";
-import { GiSettingsKnobs } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Carousel = ({ items }) => {
   const carouselRef = useRef(null);
-  const [progress, setProgress] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // Controla o índice do ponto ativo
+  const itemsPerPage = 4; // Número de itens a serem exibidos por vez
+
+  const navigate = useNavigate();
+
+  const handleCatalogo = () => {
+    navigate("/catalogo");
+  };
 
   const handleScroll = (direction) => {
     if (carouselRef.current) {
-      const scrollAmount = carouselRef.current.offsetWidth;
+      const scrollAmount = carouselRef.current.offsetWidth; // Tamanho da largura do carrossel
       carouselRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -22,8 +29,8 @@ const Carousel = ({ items }) => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
       const maxScrollLeft = scrollWidth - clientWidth;
-      const newProgress = (scrollLeft / maxScrollLeft) * 100;
-      setProgress(newProgress);
+      const newActiveIndex = Math.floor((scrollLeft / maxScrollLeft) * (items.length / itemsPerPage));
+      setActiveIndex(newActiveIndex); // Atualiza o índice do ponto ativo
     }
   };
 
@@ -31,19 +38,19 @@ const Carousel = ({ items }) => {
     const carouselElement = carouselRef.current;
     if (carouselElement) {
       carouselElement.addEventListener("scroll", updateProgress);
-      updateProgress();
+      updateProgress(); // Inicia o progresso
 
       return () => {
         carouselElement.removeEventListener("scroll", updateProgress);
       };
     }
-  }, []);
+  }, [items.length]);
 
   return (
     <main>
-      <header>
-        <p>Projetos</p>
-        <GiSettingsKnobs style={{ rotate: "90deg" }} />
+      <header className="carousel-header">
+        <p className="carousel-title">Conheça os projetos</p>
+        <button className="view-projects-button" onClick={handleCatalogo}>Ver todos os projetos &rarr;</button>
       </header>
       <div className="carousel-container">
         <button
@@ -53,12 +60,20 @@ const Carousel = ({ items }) => {
           <IoIosArrowBack />
         </button>
         <div className="carousel" ref={carouselRef}>
-          {items.map((item) => (
-            <div key={item.id} className="carousel-item">
-              <img src={item.img} alt={item.name} className="carousel-image" />
-              <p className="carousel-name">{item.name}</p>
+        {items.map((item) => (
+          <div key={item.id} className="carousel-item">
+            <img src={item.img} alt={item.name} className="carousel-image" />
+            <p className="carousel-name">{item.name}</p>
+            
+            {/* Informações extras */}
+            <div className="extra-info">
+              <p>{item.address}</p>
+              <p>{item.squareMeters} m²</p>
+              <button className="btn-conheca">Conheça &rarr;</button>
             </div>
-          ))}
+          </div>
+        ))}
+
         </div>
         <button
           className="carousel-button right"
@@ -67,12 +82,16 @@ const Carousel = ({ items }) => {
           <IoIosArrowForward />
         </button>
       </div>
-        <div className="progress-bar">
-          <div
-            className="progress-fill"
-            style={{ width: `${progress}%` }}
-          ></div>
-        </div>
+
+      {/* Progress Bar com 3 Pontos */}
+      <div className="progress-bar">
+        {Array.from({ length: Math.ceil(items.length / itemsPerPage) }).map((_, index) => (
+          <span
+            key={index}
+            className={`progress-dot ${index === activeIndex ? "active" : ""}`} // Ativa o ponto conforme a rolagem
+          />
+        ))}
+      </div>
     </main>
   );
 };

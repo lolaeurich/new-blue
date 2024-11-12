@@ -82,7 +82,7 @@
 
 @media screen and (min-width: 1024px) {
   .front {
-    height: 350px;
+    height: 300px;
     width: 30%;
     margin: auto 0;
     margin-right: 10%;
@@ -103,6 +103,7 @@
 
   .front h3,
   .front p {
+    margin-bottom: 10px;
     font-weight: 400;
     text-align: right; /* Garante que o texto fique alinhado à direita */
   }
@@ -110,6 +111,7 @@
   .front p {
     margin-right: 10%;
     font-weight: 300 !important;
+    font-size: 12px;
   }
 
   .front button {
@@ -117,6 +119,19 @@
     margin-top: 10px; /* Adiciona espaçamento caso necessário */
     margin-right: 17%;
   }
+
+  .partners-grid {
+    gap: 50px;
+    padding-inline: 5%;
+}
+
+.partners h2 {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 5%;
+    font-weight: 300;
+    font-size: 36px;
+}
 }
 
 

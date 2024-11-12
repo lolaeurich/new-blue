@@ -27,11 +27,23 @@
 }
 
 @media screen and (min-width: 768px) {
+
+    .partners {
+        padding-bottom: 0%;
+    }
     .partners-grid {
         gap: 50px;
     }
 
     .partners-grid img {
         width: 150px;
+    }
+
+    .partners h2 {
+        text-align: center;
+        color: #fff;
+        padding-bottom: 5%;
+        font-weight: 300;
+        font-size: 36px;
     }
 }

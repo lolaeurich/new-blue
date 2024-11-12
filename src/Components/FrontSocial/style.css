@@ -1,4 +1,4 @@
-.front-img {
+.social-front-img {
     width: 100%;
     height: 100%;
   
@@ -13,7 +13,7 @@
   }
   
   @media screen and (min-width: 768px) {
-    .front-img {
+    .social-front-img {
       background-image: url(../../assets/fazemos.png);
       justify-content: end;
       align-items: end;
@@ -21,7 +21,7 @@
     }
   }
   
-  .front {
+  .social-front {
     width: 80%;
     height: 100%;
     background-color: #0b76bb;
@@ -34,7 +34,7 @@
   }
   
   @media screen and (min-width: 768px) {
-    .front {
+    .social-front {
       height: 300px;
       width: 350px;
       margin: auto 0;
@@ -43,18 +43,18 @@
     }
   }
   
-  .front h3 {
+  .social-front h3 {
       font-size: 1.5rem;
       max-width: 277px;
   }
   
-  .front p {
+  .social-front p {
       font-weight: 300;
       margin: 0;
       max-width: 277px;
   }
   
-  .front button {
+  .social-front button {
       padding: 10px 20px;
       border: #fff solid 2px;
       background-color: transparent;
@@ -63,7 +63,7 @@
       margin-top: 10px;
   }
   
-  .front-decorate {
+  .social-front-decorate {
     position: absolute;
     width: 95px;
     height: 95px;
@@ -75,13 +75,13 @@
   }
   
   @media screen and (min-width: 768px) {
-    .front-decorate {
+    .social-front-decorate {
       border: #5b5c5ecc solid 7px;
     }
   }
   
   @media screen and (min-width: 1024px) {
-    .front {
+    .social-front {
       height: 350px;
       width: 40%;
       margin: auto 0;
@@ -97,17 +97,17 @@
       padding: 5% 0% 0% 0%;
     }
   
-    .front-decorate {
+    .social-front-decorate {
       display: none;
     }
 
-    .front h3 {
+    .social-front h3 {
       font-size: 2.2rem;
       max-width: 277px;
   }
   
-    .front h3,
-    .front p {
+    .social-front h3,
+    .social-front p {
       font-weight: 400;
       text-align: right;
       max-width: 500px;
@@ -115,14 +115,14 @@
       margin-right: 10%;
     }
   
-    .front p {
+    .social-front p {
       font-size: 1rem;
       line-height: 22px;
       margin-right: 10%;
       font-weight: 300 !important;
     }
   
-    .front button {
+    .social-front button {
       align-self: flex-end; /* Garante que o botão vá para a direita */
       margin-top: 10px; /* Adiciona espaçamento caso necessário */
       margin-right: 17%;
@@ -132,7 +132,7 @@
   
   @media screen and (min-width: 1300px) {
     
-    .front button {
+    .social-front button {
       margin-right: 20%;
     }
   }
@@ -140,11 +140,11 @@
   
   @media screen and (min-width: 1400px) {
 
-    .front {
+    .social-front {
       width: 35%;
     }
     
-    .front button {
+    .social-front button {
       margin-right: 23%;
     }
   }
@@ -152,11 +152,11 @@
   
   @media screen and (min-width: 1500px) {
 
-    .front {
+    .social-front {
       width: 33%;
     }
     
-    .front button {
+    .social-front button {
       margin-right: 25%;
     }
   }
@@ -164,32 +164,32 @@
   
   @media screen and (min-width: 1600px) {
 
-    .front {
+    .social-front {
       width: 31%;
     }
     
-    .front button {
+    .social-front button {
       margin-right: 27%;
     }
   }
   
   @media screen and (min-width: 1700px) {
-    .front {
+    .social-front {
       width: 29%;
     }
     
-    .front button {
+    .social-front button {
       margin-right: 29%;
     }
   }
   
   @media screen and (min-width: 1800px) {
 
-    .front {
+    .social-front {
       width: 27%;
     }
     
-    .front button {
+    .-social-front button {
       margin-right: 31%;
     }
   }

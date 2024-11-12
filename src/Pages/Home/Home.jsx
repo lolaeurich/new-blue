@@ -4,7 +4,7 @@ import Hero from "../../Components/Hero/Hero";
 import Carousel from "../../Components/Carousel/Carousel";
 import image1 from "../../assets/Carousel/image1.png";
 import image2 from "../../assets/Carousel/image2.png";
-import image3 from "../../assets/Carousel/image3.png";
+import item3 from "../../assets/Carousel/item3.png";
 import About from "../../Components/About/About";
 import Experience from "../../Components/Experience/Experience";
 import Front from "../../Components/Front/Front";
@@ -18,31 +18,43 @@ const Home1 = () => {
       id: 1,
       name: "Aya",
       img: image1,
+      address: "Curitiba - Paraná",
+      squareMeters: "200"
     },
     {
       id: 2,
       name: "Cena",
       img: image2,
+      address: "Curitiba - Paraná",
+      squareMeters: "200"
     },
     {
       id: 3,
-      name: "",
-      img: image3,
+      name: "Hit Home",
+      img: item3,
+      address: "Curitiba - Paraná",
+      squareMeters: "200"
     },
     {
       id: 4,
       name: "Aya",
       img: image1,
+      address: "Curitiba - Paraná",
+      squareMeters: "200"
     },
     {
       id: 5,
       name: "Cena",
       img: image2,
+      address: "Curitiba - Paraná",
+      squareMeters: "200"
     },
     {
       id: 6,
-      name: "",
-      img: image3,
+      name: "Hit Home",
+      img: item3,
+      address: "Curitiba - Paraná",
+      squareMeters: "200"
     },
   ];
 

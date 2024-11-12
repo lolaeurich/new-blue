@@ -13,12 +13,18 @@ const Experience = () => {
       <div className="experience-text">
         <div className="container">
           <h2>
-            <strong>Mais de 16 anos de experiência</strong> no mercado
-            imobiliário
+            <strong>Mais de 16 anos de 
+              <br/>
+              experiência</strong> no 
+              <br/>
+              mercado imobiliário
           </h2>
           <p>
-            O que nos move é a busca insaciável por inovação e a certeza da
-            excelência.
+            O que nos move é a busca 
+            <br/>
+            insaciável por inovação e a certeza 
+            <br/>
+            da excelência.
           </p>
         </div>
 

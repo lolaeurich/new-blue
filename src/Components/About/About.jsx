@@ -24,9 +24,14 @@ const About = () => {
             <h3>Para fazer mais</h3>
             <h1>projetos de sucesso</h1>
             <p>
-              Na Blue, transformamos ideias em realidade. Com um histórico
-              sólido, entregamos projetos de alta qualidade para todas as fases
-              da vida. Confiança, expertise e resultados concretos são nossos
+              Na Blue, transformamos ideias em realidade. Com 
+              <br/>
+              um histórico sólido, entregamos projetos de alta 
+              <br/>
+              qualidade para todas as fases da vida. Confiança, 
+              <br/>
+              expertise e resultados concretos são nossos 
+              <br/>
               compromissos.
             </p>
             <button>Sobre nós</button>

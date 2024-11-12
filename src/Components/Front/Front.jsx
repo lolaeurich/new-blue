@@ -10,8 +10,11 @@ const Front = () => {
           <br/>
           do Grupo Blue</h3>
         <p>
-          Somos uma Holding que atua na gestão de produtos imobiliários através
-          de nossas marcas subsidiás.
+          Somos uma Holding que atua na gestão de 
+          <br/>
+          produtos imobiliários através de nossas 
+          <br/>
+          marcas subsidiás.
         </p>
         <button>Saiba mais</button>
         <div className="front-decorate"></div>

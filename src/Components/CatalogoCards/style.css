@@ -124,7 +124,6 @@
         align-items: center;
         padding-bottom: 10%;
         grid-template-rows: repeat(4, auto); 
-        overflow-y: auto; 
         width: 92%;
         margin: 0 auto; 
         column-gap: 2%;

@@ -41,7 +41,6 @@
   min-width: 250px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras para destacar */
 }
 
 .neg-carousel-image {
@@ -96,8 +95,35 @@
 /* Adicionando um efeito responsivo */
 @media screen and (min-width: 1200px) {
   .negocios-carousel {
-    height: 95vh;
+    height: 85vh;
   }
+
+  .neg-carousel {
+    display: flex;
+    overflow: auto;
+    padding: 10px;
+    margin: 0 auto;
+    scrollbar-width: none;
+    gap: 14px;
+    scroll-behavior: smooth;
+    padding-inline: 5%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.neg-carousel-image {
+  width: 100%;
+  height: 354px;
+  object-fit: cover;
+}
+
+.negocios-h2 {
+  font-size: 2.5rem;
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 2%;
+}
 }
 
 @media screen and (min-width: 1300px) {
