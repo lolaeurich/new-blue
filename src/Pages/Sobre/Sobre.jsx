@@ -13,9 +13,9 @@ const Sobre = () => {
       <Nav />
       <SobreHero />
       <SobreAtuacao />
-      <Pilares />
+      {/*<Pilares />*/}
       <Partners />
-      <Notify />
+      {/*<Notify />*/}
       <Footer />
     </div>
   );
