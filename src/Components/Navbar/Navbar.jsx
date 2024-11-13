@@ -41,6 +41,10 @@ function Nav() {
     navigate("/nossosNegocios");
   };
 
+  const handleSobre = () => {
+    navigate("/sobre");
+  };
+
   const toggleEmpreendimentos = () => {
     setIsEmpreendimentosOpen(!isEmpreendimentosOpen);
   };
@@ -74,7 +78,7 @@ function Nav() {
         </div>
         <div className="nav-menu-desktop">
           <ul className="desktop-menu-list">
-            <li>Sobre Nós</li>
+            <li onClick={handleSobre}>Sobre Nós</li>
             <li onClick={handleNossosNegocios}>Nossos Negócios</li>
             <li onClick={handleNaMidia}>Na Mídia</li>
             <li onClick={handleSocial}>Blue Social</li>
@@ -92,7 +96,7 @@ function Nav() {
               X
             </button>
             <ul className="dropdown-list">
-              <li>Sobre Nós</li>
+              <li onClick={handleSobre}>Sobre Nós</li>
               <li onClick={handleNossosNegocios}>Nossos Negócios</li>
               <li onClick={handleNaMidia}>Na Mídia</li>
               <li onClick={handleSocial}>Blue Social</li>

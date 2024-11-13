@@ -1,0 +1,185 @@
+.atua-front-img {
+    width: 100%;
+    height: 100%;
+  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .atua-front-img {
+      background-image: url(../../assets/atuacao.png);
+      justify-content: end;
+      align-items: end;
+      height: 557px;
+    }
+  }
+  
+  .atua-front {
+    width: 80%;
+    height: 100%;
+    background-color: #0b76bb;
+    padding: 20px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 25px;
+    height: 300px;
+    color: #fff;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .atua-front {
+      height: 300px;
+      width: 350px;
+      margin: auto 0;
+      margin-right: 10%;
+      background-color: #0b75bbda;
+    }
+  }
+  
+  .atua-front h3 {
+      font-size: 1.5rem;
+      max-width: 277px;
+  }
+  
+  .atua-front p {
+      font-weight: 300;
+      margin: 0;
+      max-width: 277px;
+  }
+  
+  .atua-front button {
+      padding: 10px 20px;
+      border: #fff solid 2px;
+      background-color: transparent;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 10px;
+  }
+  
+  .atua-front-decorate {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    bottom: 0;
+    right: 0;
+    border: #001638 solid 7px;
+    background-color: #00CCFF;
+    border-radius: 25px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .atua-front-decorate {
+      border: #5b5c5ecc solid 7px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .atua-front {
+        height: 300px;
+        width: 35%;
+        margin: auto 0;
+        margin-right: 4%;
+        background-color: transparent;
+        background-image: url(/src/assets/atua-elemento.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 0% 0% 0%;
+    }
+  
+    .atua-front-decorate {
+      display: none;
+    }
+  
+    .atua-front h3,
+    .atua-front p {
+      margin-bottom: 10px;
+      font-weight: 400;
+      text-align: right; /* Garante que o texto fique alinhado à direita */
+    }
+  
+    .atua-front p {
+        margin-right: 0%;
+        font-weight: 300 !important;
+        font-size: 12px;
+        max-width: 70%;
+        line-height: 22px;
+        padding-bottom: 10%;
+        padding-top: 2%;
+    }
+  
+    .atua-front button {
+      align-self: flex-end; /* Garante que o botão vá para a direita */
+      margin-top: 10px; /* Adiciona espaçamento caso necessário */
+      margin-right: 17%;
+    }
+  
+    .atua-partners-grid {
+      gap: 50px;
+      padding-inline: 5%;
+  }
+  
+  .atua-front h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    max-width: 277px;
+    align-self: end;
+    padding-right: 15%;
+  }
+  }
+  
+  
+  @media screen and (min-width: 1300px) {
+    
+    .atua-front button {
+      margin-right: 20%;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1400px) {
+    
+    .atua-front button {
+      margin-right: 23%;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1500px) {
+    
+    .atua-front button {
+      margin-right: 25%;
+    }
+  }
+  
+  
+  @media screen and (min-width: 1600px) {
+    
+    .atua-front button {
+      margin-right: 27%;
+    }
+  }
+  
+  @media screen and (min-width: 1700px) {
+    
+    .atua-front button {
+      margin-right: 29%;
+    }
+  }
+  
+  @media screen and (min-width: 1800px) {
+    
+    .atua-front button {
+      margin-right: 31%;
+    }
+  }
