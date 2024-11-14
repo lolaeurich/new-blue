@@ -134,12 +134,32 @@
     font-weight: 700;
     max-width: 277px;
     align-self: end;
-    padding-right: 15%;
+    padding-right: 17%;
   }
   }
   
   
   @media screen and (min-width: 1300px) {
+
+    .atua-front {
+      height: 330px;
+    }
+
+    .atua-front-img {
+      background-image: url(/src/assets/atuacao.png);
+      justify-content: end;
+      align-items: end;
+      height: 587px;
+  }
+
+    .atua-front h3 {
+      padding-right: 17%;
+      font-size: 2rem;
+    }
+
+    .atua-front p {
+      font-size: 0.8rem;
+    }
     
     .atua-front button {
       margin-right: 20%;
@@ -148,14 +168,45 @@
   
   
   @media screen and (min-width: 1400px) {
+
+    .atua-front {
+      height: 350px;
+    }
+
+    .atua-front h3 {
+      padding-right: 21%;
+    }
     
     .atua-front button {
       margin-right: 23%;
+    }
+
+    .atua-front h3 {
+      padding-right: 17%;
+      font-size: 2rem;
+    }
+
+    .atua-front p {
+      font-size: 0.8rem;
     }
   }
   
   
   @media screen and (min-width: 1500px) {
+
+    .atua-front {
+      height: 370px;
+    }
+
+    .atua-front h3 {
+      padding-right: 13%;
+      font-size: 2rem;
+    }
+
+    .atua-front p {
+      font-size: 1rem;
+      max-width: 82%;
+    }
     
     .atua-front button {
       margin-right: 25%;
@@ -164,13 +215,25 @@
   
   
   @media screen and (min-width: 1600px) {
+
+    .atua-front h3 {
+      padding-right: 11%;
+    }
     
     .atua-front button {
       margin-right: 27%;
     }
+
+    .atua-front {
+      width: 31%;
+    }
   }
   
   @media screen and (min-width: 1700px) {
+
+    .atua-front h3 {
+      padding-right: 13%;
+    }
     
     .atua-front button {
       margin-right: 29%;
@@ -178,6 +241,14 @@
   }
   
   @media screen and (min-width: 1800px) {
+
+    .atua-front {
+      width: 29%;
+    }
+
+    .atua-front h3 {
+      padding-right: 13%;
+    }
     
     .atua-front button {
       margin-right: 31%;

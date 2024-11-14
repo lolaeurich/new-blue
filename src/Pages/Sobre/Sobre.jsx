@@ -5,6 +5,8 @@ import Footer from "../../Components/Footer/Footer";
 import SobreHero from "../../Components/SobreHero/SobreHero";
 import SobreAtuacao from "../../Components/SobreAtuacao/SobreAtuacao";
 import Pilares from "../../Components/SobrePilares/SobrePilares";
+import Historico from "../../Components/SobreHistorico/SobreHistorico";
+import Reconhecimento from "../../Components/Reconhecimento/Reconhecimento";
 
 const Sobre = () => {
 
@@ -13,9 +15,10 @@ const Sobre = () => {
       <Nav />
       <SobreHero />
       <SobreAtuacao />
-      {/*<Pilares />*/}
+      <Pilares />
+      <Historico />
+      <Reconhecimento />
       <Partners />
-      {/*<Notify />*/}
       <Footer />
     </div>
   );

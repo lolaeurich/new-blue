@@ -6,6 +6,7 @@ import Social from './Pages/Social/Social';
 import Catalogo from './Pages/Catalogo/Catalogo';
 import NossosNegocios from './Pages/NossosNegocios/NossosNegocios';
 import Sobre from './Pages/Sobre/Sobre';
+import Aya from './Pages/Empreendimentos/Aya/Aya';
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
       <Route path="/catalogo" element={<Catalogo />} />
       <Route path="/nossosNegocios" element={<NossosNegocios />} />
       <Route path="/sobre" element={<Sobre />} />
+      <Route path="/Aya" element={<Aya />} />
     </Routes>
   );
 };

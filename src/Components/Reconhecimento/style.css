@@ -1,0 +1,85 @@
+@media screen and (min-width: 1024px) {
+  
+  .reconhecimento {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rec-img {
+    width: 100%;
+  }
+  
+  .carousel-rec {
+    position: relative;
+    width: 100%;
+    height: 30vh; /* Ajuste conforme necessário */
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .carousel-rec-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-rec-images {
+    display: flex;
+    transition: transform 0.5s ease;
+    column-gap: 7%;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-rec-image {
+    width: 90%; /* A cada "slide", a largura de uma imagem ocupará toda a tela */
+    object-fit: contain;
+  }
+  
+  .carousel-rec-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00183C;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: transparent;
+    padding-inline: 5%;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-rec-button.prev {
+    left: 10px;
+  }
+  
+  .carousel-rec-button.next {
+    right: 10px;
+  }
+  
+}
+
+@media screen and (min-width: 1200px) {
+
+  .carousel-rec-image {
+    width: 25%;
+    object-fit: contain;
+}
+
+}
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .carousel-rec {
+      height: 50vh;
+    }
+  }
+  

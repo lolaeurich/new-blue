@@ -1,0 +1,82 @@
+.avanco {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5%;
+  }
+  
+  .avanco-header {
+    width: 80%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10%;
+  }
+
+  .avanco-header h3 {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .avanco-header p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+  .progress-bar {
+    width: 85%;
+    height: 15px; /* Ajuste a altura da barra de progresso conforme necessário */
+    background-color: #000D1F; /* Cor cinza para o fundo */
+    border-radius: 45px; /* Bordas arredondadas */
+    position: relative;
+  }
+  
+  .progress-bar-background {
+    width: 100%;
+    height: 100%;
+    background-color: #000D1F; /* Cinza */
+    border-radius: 45px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background-color: #58FFC3; /* Verde */
+    border-radius: 10px; /* Bordas arredondadas no preenchimento */
+    transition: width 0.3s ease; /* Suaviza a transição */
+  }
+
+  .dados {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-inline: 5%;
+    padding-top: 3%;
+  }
+  
+
+  .dados1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .dados1 p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0;
+    padding-bottom: 10%;
+  }
+
+  .dados1 h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+  }

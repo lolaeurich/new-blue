@@ -45,6 +45,19 @@ function Nav() {
     navigate("/sobre");
   };
 
+
+  const handleAya = () => {
+    navigate("/Aya");
+  };
+
+
+
+  const handleParceiro = () => {
+    const telefone = "5541998813525"; // Substitua pelo número de telefone desejado
+    const url = `https://wa.me/${telefone}`;
+    window.open(url, "_blank"); // Abre o link em uma nova aba
+  };
+
   const toggleEmpreendimentos = () => {
     setIsEmpreendimentosOpen(!isEmpreendimentosOpen);
   };
@@ -83,7 +96,7 @@ function Nav() {
             <li onClick={handleNaMidia}>Na Mídia</li>
             <li onClick={handleSocial}>Blue Social</li>
             <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
-            <li>Quero ser um parceiro</li>
+            <li onClick={handleParceiro}>Quero ser um parceiro</li>
             <li className="sociais">
               <button className="parceiro-btn"><img alt="" src={navicon}/>Área restrita</button>
             </li>
@@ -101,7 +114,7 @@ function Nav() {
               <li onClick={handleNaMidia}>Na Mídia</li>
               <li onClick={handleSocial}>Blue Social</li>
               <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
-              <li>Quero ser um parceiro</li>
+              <li onClick={handleParceiro}>Quero ser um parceiro</li>
             </ul>
             <div className="sociais">
               <button className="parceiro-btn"><img alt="" src={navicon}/>Área restrita</button>
@@ -118,7 +131,7 @@ function Nav() {
               </button>
             </div>
             <div className="empreendimentos-list">
-              <p className="view-project">
+              <p className="view-project" onClick={handleAya}>
                 Aya <FaArrowRight />
               </p>
               <p className="view-project">

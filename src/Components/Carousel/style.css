@@ -50,6 +50,7 @@ main header {
   position: relative;
   display: flex;
   align-items: center;
+  padding-inline: 2%;
 }
 
 .carousel {
@@ -193,7 +194,7 @@ main header {
   }
 
   .carousel-header {
-    width: 90%;
+    width: 87%;
     justify-content: center;
     padding-top: 3%;
   }
@@ -239,3 +240,35 @@ main header {
     height: 325px;
   }
 }
+
+@media screen and (min-width: 1300px) {
+
+  .carousel-header {
+    width: 85%;
+  }
+  .carousel-container {
+    padding-inline: 5%;
+}
+}
+
+@media screen and (min-width: 1400px) {
+
+  .carousel-header {
+    width: 78%;
+  }
+  .carousel-container {
+    padding-inline: 8%;
+}
+}
+
+@media screen and (min-width: 1500px) {
+
+  .carousel-header {
+    width: 72%;
+  }
+  .carousel-container {
+    padding-inline: 10%;
+}
+}
+
+

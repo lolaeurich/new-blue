@@ -111,6 +111,11 @@
       column-gap: 5%;
       justify-items: center;
     }
+
+    .na-midia-container::-webkit-scrollbar {
+      display: none; 
+    }
+    
   
     .midia-card {
       background-color: #fff;
@@ -161,4 +166,20 @@
       grid-template-columns: repeat(3, 1fr); /* Exibe 3 cards por linha */
     }
   }    
+
+
+  @media (min-width: 1700px) {
+      .na-midia-container {
+        row-gap: 5%;
+        padding-bottom: 5%;
+      }
+
+      .midia-card {
+        height: 50vh;
+      }
+
+      .midia-card-link {
+        margin-top: 20px;
+      }
+  }   
   

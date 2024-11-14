@@ -5,7 +5,7 @@ import sobre from "../../assets/sobre.png";
 
 function SobreHero() {
   return (
-    <section>
+    <section className="sobre">
       <div className="sobre-hero">
         <div className="sobre-hero-text">
           <header>

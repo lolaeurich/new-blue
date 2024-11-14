@@ -220,3 +220,29 @@ justify-content: flex-start;
 }
 
 }
+
+@media screen and (min-width: 1400px) {
+  .sidebar-container {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      /* padding: 1rem; */
+      height: 55vh;
+      text-align: left;
+      margin: 0;
+      column-gap: 5%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .sidebar-container {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      /* padding: 1rem; */
+      height: 55vh;
+      text-align: left;
+      margin: 0;
+      column-gap: 11%;
+  }
+}

@@ -1,0 +1,96 @@
+.section-aya {
+    padding: 0 10px;
+    margin-top: 120px;
+    position: relative;
+    height: auto;
+}
+
+.aya-hero {
+    width: 100%;
+    height: 250px;
+    background-image: url("../../../assets/Empreendimentos/aya.png");
+    background-size: cover;
+    background-position: 70% 0%;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Alinha o conteúdo no fundo da imagem */
+    border-radius: 30px;
+    position: relative;
+}
+
+
+@media (min-width: 1024px) {
+
+    .section-aya {
+        padding: 0 10px;
+        margin-top: 120px;
+        position: relative;
+        height: 75vh;
+    }
+
+    .aya-hero {
+        width: 95%;
+        height: 70vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 30px;
+        position: relative;
+        padding: 0;
+}
+}
+
+@media (min-width: 1100px) {
+
+    .section-aya {
+        height: 85vh;
+    }
+
+    .aya-hero {
+        width: 92%;
+        height: 73vh;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .section-aya {
+        height: 95vh;
+    }
+
+    .aya-hero {
+        width: 92%;
+        height: 83vh;
+    }
+}
+
+@media (min-width: 1300px) {
+
+    .section-aya {
+        height: 105vh;
+    }
+
+    .aya-hero {
+        width: 92%;
+        height: 90vh;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .section-aya {
+        height: 105vh;
+    }
+
+    .aya-hero {
+        width: 92%;
+        height: 96vh;
+    }
+}
+
+

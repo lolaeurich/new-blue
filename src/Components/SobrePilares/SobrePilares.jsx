@@ -36,7 +36,7 @@ const Pilares = () => {
 
            <div className='para-fazer-mais'>
                 <div className='fazer-mais-text'>
-                    <h2>Para fazer mais com menos</h2>
+                    <h2>Para fazer <span>mais com menos</span></h2>
                     <h4>Cultura e equipe</h4>
                     <p>Mantemos uma estrutura enxuta e uma cultura 
                     <br/>

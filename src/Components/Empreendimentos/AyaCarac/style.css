@@ -1,0 +1,211 @@
+.carac {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5%;
+}
+
+.carac-header {
+    display: flex;
+    width: 90%;
+    background-color: #063272;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: space-around;
+    color: #fff;
+}
+
+.caracteristicas {
+    display: flex;
+    padding-top: 5%;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+}
+
+.carac-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.carac-text h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.carac-text p {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 22px;
+    column-gap: 3%;
+    display: flex;
+}
+
+.carac-text p span{
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 22px;
+}
+
+@media screen and (min-width: 1300px) {
+    .about-details3 {
+        background-image: url(/src/assets/element.png);
+        border-radius: 25px;
+        width: full;
+        height: 321px;
+        position: relative;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 402px;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .caracteristicas {
+        display: flex;
+        padding-top: 5%;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 95%;
+    }
+
+    .aya-carousel-header {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        column-gap: 16%;
+    }
+
+    .about-details3 {
+        background-image: url(/src/assets/element.png);
+        border-radius: 25px;
+        width: full;
+        height: 342px;
+        position: relative;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 447px;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .aya-carousel-header {
+        column-gap: 14% !important;
+    }
+
+    .about-details3 {
+        background-image: url(/src/assets/element.png);
+        border-radius: 25px;
+        width: full;
+        height: 361px;
+        position: relative;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 470px;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+
+    .about-details3 {
+        background-image: url(/src/assets/element.png);
+        border-radius: 25px;
+        width: full;
+        height: 384px;
+        position: relative;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 501px;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .carac-img {
+        width: 40%;
+    }
+
+    .carac-text h2 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .carac-text p {
+        font-size: 16px;
+        font-weight: 300;
+        color: #fff;
+        line-height: 22px;
+        column-gap: 3%;
+        display: flex;
+    }
+
+    .about-details3 p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Sora', sans-serif;
+        color: #fff;
+        margin: 0;
+    }
+
+    .about-details3  {
+        font-size: 12px;
+        font-weight: 300;
+        font-family: 'Sora', sans-serif;
+        color: #fff;
+        margin: 0;
+    }
+
+    .about-details3 h3, .about-details3 h3 {
+        font-size: 36px;
+        font-weight: 700;
+        font-family: 'Sora', sans-serif;
+        color: #fff;
+        margin: 0;
+        padding-bottom: 3%;
+    }
+
+    .about-details3 {
+        background-image: url(/src/assets/element.png);
+        border-radius: 25px;
+        width: full;
+        height: 435px;
+        position: relative;
+        background-color: transparent;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 563px;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
