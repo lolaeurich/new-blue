@@ -78,16 +78,94 @@
     border-radius: 8px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background: transparent; 
 }
 
 .catalogo-card-image {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    object-position: center; 
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
+
+/* Efeito de hover no card */
+.catalogo-card:hover .carousel-name {
+    transform: translateY(-20px); /* Eleva o nome ao passar o mouse */
+}
+
+.catalogo-card:hover .extra-info {
+    opacity: 1;
+    transform: translateY(0); /* Revela as informações extras */
+}
+
+/* Nome do card */
+.carousel-name {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+.carousel-card:hover .carousel-name {
+    transform: translateY(-120px); /* Eleva o nome */
+    color: #00183C;
+    z-index: 1;
+  }
+
+/* Informações extras (inicialmente escondidas) */
+.extra-info {
+    opacity: 0;
+    transform: translateY(20px); /* Desloca para baixo inicialmente */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+    color: #00183C;
+    z-index: 1;
+}
+
+/* Botão Conheça */
+.extra-info .btn-conheca {
+    background-color: transparent;
+    border: none;
+    padding-top: 20%;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #00183C;
+    font-weight: 700;
+    margin-right: 2%;
+    padding-left: 0px;
+}
+
+/* Overlay esbranquiçado */
+.catalogo-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Impede interação com o layer */
+    z-index: 0; /* Fica abaixo do conteúdo do card */
+}
+
+/* Ativa o overlay esbranquiçado ao passar o mouse */
+.catalogo-card:hover::after {
+    opacity: 1; /* Ativa o overlay */
+}
+
+.catalogo-card:hover .carousel-name {
+    transform: translateY(-120px); /* Eleva o nome */
+    color: #00183C;
+    z-index: 1;
+  }
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -103,7 +181,6 @@
 }
 
 @media (min-width: 1024px) {
-
     .filter-item select {
         border: solid 1px #58FFC3;
         border-radius: 10px;
@@ -147,7 +224,6 @@
 }
 
 @media (min-width: 1200px) {
-
     .filter-item select {
         width: 200px;
     }
@@ -158,7 +234,6 @@
 }
 
 @media (min-width: 1300px) {
-
     .filter-item select {
         width: 220px;
     }
@@ -169,7 +244,6 @@
 }
 
 @media (min-width: 1400px) {
-
     .filter-item select {
         width: 240px;
     }
@@ -180,7 +254,6 @@
 }
 
 @media (min-width: 1500px) {
-
     .filter-item select {
         width: 260px;
     }
@@ -191,7 +264,6 @@
 }
 
 @media (min-width: 1600px) {
-
     .filter-item select {
         width: 280px;
     }
@@ -202,7 +274,6 @@
 }
 
 @media (min-width: 1700px) {
-
     .filter-item select {
         width: 300px;
     }
@@ -213,7 +284,6 @@
 }
 
 @media (min-width: 1800px) {
-
     .filter-item select {
         width: 320px;
     }

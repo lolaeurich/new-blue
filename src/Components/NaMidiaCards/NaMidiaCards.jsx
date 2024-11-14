@@ -6,6 +6,11 @@ import exame from "../../assets/exame.png";
 import ayalogo from "../../assets/ayalogo.jpg";
 import aya from "../../assets/aya4.png";
 import brain from "../../assets/brain.png";
+import jp from "../../assets/jp.png";
+import sind from "../../assets/sind.png";
+import band from "../../assets/band.png";
+import ypo from "../../assets/ypo.png";
+
 
 const NaMidiaCards = () => {
   // Define os itens dos cards
@@ -26,26 +31,74 @@ const NaMidiaCards = () => {
     },
     { 
       id: 3, 
-      title: "5 dicas para investir em imóveis", 
-      img: image, 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
-      link: "https://exemplo3.com/noticia3" // Link para o terceiro item
+      title: "MERCADO IMOBILIÁRIO DE CANTO A CANTO | EPISÓDIO 28", 
+      img: jp, 
+      description: "No 27º episódio, Canto recebe o CEO da Isket, Joseph Galiano Neto e o CEO  da Quartzo Capital, Marcel Malczewski.",
+      link: "https://www.youtube.com/watch?v=JwLP227xBzY" // Link para o terceiro item
     },
     { 
       id: 4, 
-      title: "5 dicas para investir em imóveis", 
-      img: image, 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
-      link: "https://exemplo4.com/noticia4" // Link para o quarto item
+      title: "Sinduscon Meeting - 27/08/2024 - Sandro Gamba", 
+      img: sind, 
+      description: "O financiamento imobiliário está em alta no país. A expectativa de crescimento é de aproximadamente 8% em 2024, segundo dados da Abecip (Associação Brasileira das Entidades de Crédito Imobiliário e Poupança).",
+      link: "https://www.youtube.com/live/A3tuWIbxtX8" // Link para o quarto item
     },
     { 
       id: 5, 
-      title: "5 dicas para investir em imóveis", 
-      img: image, 
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
-      link: "https://exemplo5.com/noticia5" // Link para o quinto item
+      title: "Aluguel residencial: a bola da vez no Brasil?", 
+      img: exame, 
+      description: "Entenda a tendência de profissionalização da locação residencial no país e veja como investidores grandes e pequenos podem aproveitar esse mercado",
+      link: "https://exame.com/lideres-extraordinarios/aluguel-residencial-a-bola-da-vez-no-brasil/" // Link para o quinto item
     },
-    // Adicione os demais itens com links aqui...
+    { 
+      id: 6, 
+      title: "O impacto do MCMV na indústria da Construção - José Mario Marim", 
+      img: band, 
+      description: "O impacto do MCMV na indústria da Construção - José Mario Marim | BAND NEWS",
+      link: "https://www.youtube.com/watch?v=jF8W_XMliP4" // Link para o quinto item
+    },
+    { 
+      id: 7, 
+      title: "Vamos falar sobre finanças? Acompanhe os escritores do Portal Líderes Extraordinários do YPO", 
+      img: ypo, 
+      description: "O Portal Líderes Extraordinários surge em uma parceria do YPO com a Exame para trazer assuntos relevantes sobre finanças, mercado financeiro, investimento e educação financeira.",
+      link: "https://open.spotify.com/episode/1W3VgNTgrnED9D0C4xBIs1?si=nIEECdIqRH6ZGDjlV5S8Og&utm_medium=share&utm_source=linktree&nd=1&dlsi=3c3f08452957468d" // Link para o quinto item
+    },
+    { 
+      id: 8, 
+      title: "O impacto do MCMV na indústria da Construção - José Mario Marim", 
+      img: ypo, 
+      description: "A importância do minimalismo e o estilo de vida minimalista",
+      link: "https://open.spotify.com/episode/0uJHQzb4deENdSPS3WRbai?go=1&sp_cid=d8cb7d89b96afdf21df1abe788f29fbf&utm_source=embed_player_p&utm_medium=desktop&nd=1&dlsi=07741ae231a944d0" // Link para o quinto item
+    },
+    { 
+      id: 9, 
+      title: "Imóvel ou CDI: qual a melhor escolha para investidores?", 
+      img: exame, 
+      description: "As principais características do CDI e do investimento imobiliário - e como equilibrar seu portfólio para obter o melhor retorno possível",
+      link: "https://exame.com/lideres-extraordinarios/financas/imovel-ou-cdi-qual-a-melhor-escolha-para-investidores/" // Link para o quinto item
+    },
+    { 
+      id: 10, 
+      title: "Imóvel é escasso – como bater o CDI investindo em imóveis?", 
+      img: exame, 
+      description: "Investir em imóveis é uma estratégia robusta ao longo do tempo e supera consistentemente o CDI",
+      link: "https://exame.com/lideres-extraordinarios/governanca/imovel-e-escasso-como-bater-o-cdi-investindo-em-imoveis/" // Link para o quinto item
+    },
+    { 
+      id: 11, 
+      title: "Quer diversificar? Confira cinco dicas para investir em imóveis", 
+      img: exame, 
+      description: "Saiba como diversificar seus investimentos com mais segurança através de imóveis.",
+      link: "https://exame.com/lideres-extraordinarios/financas/cinco-dicas-para-investir-em-imoveis/" // Link para o quinto item
+    },
+    { 
+      id: 12, 
+      title: "5 estratégias inovadoras para gerar renda passiva com imóveis", 
+      img: exame, 
+      description: "Nesse artigo, mergulharemos em cinco alternativas emocionantes para aproveitar o mercado imobiliário brasileiro e obter um fluxo constante de receita",
+      link: "https://exame.com/lideres-extraordinarios/financas/imovel-ou-cdi-qual-a-melhor-escolha-para-investidores/" // Link para o quinto item
+    },
   ];
 
   // Estado para controlar a página atual e itens por página

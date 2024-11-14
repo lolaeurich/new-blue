@@ -1,6 +1,7 @@
 import "./style.css";
 import { useState } from "react";
 import { FaArrowDownLong } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
 import aya from "../../assets/Catalogo/ayay.png";
 import cena from "../../assets/Catalogo/cena.png";
 import hit from "../../assets/Catalogo/hit.png";
@@ -20,23 +21,41 @@ import residencial from "../../assets/Catalogo/residencial.png";
 
 const CatalogoCards = () => {
   const items = [
-    { id: 1, img: aya },
-    { id: 2, img: cena },
-    { id: 3, img: hit },
-    { id: 4, img: parque },
-    { id: 5, img: plus },
-    { id: 6, img: elysium },
-    { id: 7, img: bento },
-    { id: 8, img: reserva },
-    { id: 9, img: eixo },
-    { id: 10, img: explore },
-    { id: 11, img: maison },
-    { id: 12, img: ibiza },
-    { id: 13, img: vista },
-    { id: 14, img: novo },
-    { id: 15, img: prado },
-    { id: 16, img: residencial },
+    { id: 1, img: aya, name: "Aya", address: "Curitiba - Paraná", squareMeters: "200"},
+    { id: 2, img: cena, name: "Cena Living", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 3, img: hit, name: "Hit Home", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 4, img: parque, name: "Parque das Flores", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 5, img: plus, name: "Plus Portão", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 6, img: elysium, name: "Elysium", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 7, img: bento, name: "Bento 246", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 8, img: reserva, name: "Reserva 361", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 9, img: eixo, name: "Eixo 795", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 10, img: explore, name: "Explore Botânico", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 11, img: maison, name: "Maison Alto da Glória", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 12, img: ibiza, name: "Ibiza Unique Home", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 13, img: vista, name: "Vista da Serra", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 14, img: novo, name: "Novo Prado Paiol", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 15, img: prado, name: "Novo Prado Araucária", address: "Curitiba - Paraná", squareMeters: "200" },
+    { id: 16, img: residencial, name: "Residencial Jardins", address: "Curitiba - Paraná", squareMeters: "200" },
   ];
+
+  const navigate = useNavigate();
+
+  const handleItemClick = (id) => {
+    switch (id) {
+      case 1:
+        navigate("/Aya"); // Navega para a página "/Aya"
+        break;
+      case 2:
+        navigate("/Cena"); // Navega para a página "/Cena"
+        break;
+      case 3:
+        navigate("/HitHome"); // Navega para a página "/HitHome"
+        break;
+      default:
+        console.log("Ação para o item desconhecido");
+    }
+  };
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 16;
@@ -95,14 +114,22 @@ const CatalogoCards = () => {
         </div>
       </div>
 
-      {/* Renderização dos cards */}
       <div className="catalogo-container">
-        {currentItems.map((item) => (
-          <div key={item.id} className="catalogo-card">
-            <img src={item.img} alt={`Imagem ${item.id}`} className="catalogo-card-image" />
-          </div>
-        ))}
+  {currentItems.map((item) => (
+    <div key={item.id} className="catalogo-card"  onClick={() => handleItemClick(item.id)}>
+      <img src={item.img} alt={`Imagem ${item.id}`} className="catalogo-card-image" />
+      <p className="carousel-name" style={{ paddingLeft: "5%" }}>{item.name}</p>
+
+      {/* Informações extras */}
+      <div className="extra-info">
+        <p style={{ paddingLeft: "5%", width: "100%" }}>{item.address}</p>
+        <p style={{ paddingLeft: "5%" }}>{item.squareMeters} m²</p>
+        <button className="btn-conheca" style={{ paddingLeft: "5%" }}>Conheça &rarr;</button>
       </div>
+    </div>
+  ))}
+</div>
+
     </main>
   );
 };
