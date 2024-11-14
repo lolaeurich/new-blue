@@ -71,10 +71,16 @@ const Carac = () => {
         )}
 
         {selectedContent === "diferenciais" && (
-          <div className="carac-text">
+          <><img className="caract-img" alt="" src={aya} /><div className="carac-text">
+            
             <h2>Diferenciais</h2>
-            <p>Conteúdo sobre os diferenciais do empreendimento...</p>
-          </div>
+            <p>&#8226; Localização estratégica;</p>
+            <p>&#8226; Design sustentável;</p>
+            <p>&#8226; Praça privativa;</p>
+            <p>&#8226; Diversidade de unidades;</p>
+            <p>&#8226; Serviços de conveniência integrados;</p>
+            <p>&#8226; Foco em investimentos.</p>
+          </div></>
         )}
 
         {selectedContent === "tour" && (
@@ -85,10 +91,28 @@ const Carac = () => {
         )}
 
         {selectedContent === "localizacao" && (
-          <div className="carac-text">
-            <h2>Localização</h2>
-            <p>Conteúdo sobre a localização do empreendimento...</p>
-          </div>
+          <><img className="caract-img" alt="" src={aya} /><div className="carac-text">
+            <h2>Localização:</h2>
+            <p>O Aya Residences situa-se na Rua Emiliano 
+              <br/>
+              Perneta, 260, em Curitiba, uma localização 
+              <br/>
+              estratégica que combina o charme e a 
+              <br/>
+              tranquilidade de uma área residencial com a 
+              <br/>
+              conveniência de estar próximo ao vibrante centro 
+              <br/>
+              da cidade. Esta região é conhecida por sua 
+              <br/>
+              proximidade a diversos pontos culturais, 
+              <br/>
+              comerciais e de entretenimento, oferecendo aos 
+              <br/>
+              moradores e visitantes fácil acesso a tudo que 
+              <br/>
+              precisam para uma estadia prática e confortável.</p>
+          </div></>
         )}
 
         {selectedContent === "contato" && (

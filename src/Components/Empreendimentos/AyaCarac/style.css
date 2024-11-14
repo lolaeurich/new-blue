@@ -18,6 +18,14 @@
     color: #fff;
 }
 
+.carac-header p {
+    color: #fff;
+}
+
+.carac-header p.active {
+       color: #58FFC3; /* Cor verde para o botão ativo */
+}
+
 .caracteristicas {
     display: flex;
     padding-top: 5%;
@@ -131,6 +139,10 @@
 }
 
 @media screen and (min-width: 1700px) {
+
+    .carac {
+        padding-bottom: 0%;
+    }
 
     .about-details3 {
         background-image: url(/src/assets/element.png);

@@ -78,4 +78,20 @@
   .carousel-arrowaya:hover {
     color: #00b33c; /* Cor das flechas quando passamos o mouse */
   }
+
+  .aya-carousel-header p.active {
+    background-color: #58FFC3; /* Cor verde para o botão ativo */
+    color: #000D1F; /* Cor do texto quando ativo */
+  }
+
+  @media screen and (min-width: 1700px) {
+    .carousel-image-aya img {
+      width: 90%;
+      max-width: none;
+    }
+
+    .aya-carousel-header {
+      column-gap: 5% !important;
+  }
+  }
   
