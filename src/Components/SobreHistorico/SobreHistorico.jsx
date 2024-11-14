@@ -1,5 +1,5 @@
 import "./style.css";
-import info from "../../assets/infográfico.png";
+import info from "../../assets/infografico.png";
 
 const Historico= () => {
 

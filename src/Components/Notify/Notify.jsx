@@ -1,10 +1,9 @@
 import "./style.css";
 import { FaArrowRight } from "react-icons/fa";
-import image from "../../assets/Notify/notify.png";
+import exame from "../../assets/exame.png";
 import { useNavigate } from "react-router-dom";
 
 const Notify = () => {
-
   const navigate = useNavigate();
 
   const handleNaMidia = () => {
@@ -14,24 +13,27 @@ const Notify = () => {
   const items = [
     {
       id: 1,
-      title: "5 dicas para investir em imóveis",
-      img: image,
+      title: "Imóvel ou CDI: qual a melhor escolha para investidores?",
+      img: exame,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
+        "As principais características do CDI e do investimento imobiliário -- e como equilibrar seu portfólio para obter o melhor retorno possível",
+      link: "https://exame.com/lideres-extraordinarios/financas/imovel-ou-cdi-qual-a-melhor-escolha-para-investidores/", // Link para o primeiro item
     },
     {
       id: 2,
-      title: "Moradia econômica no Brasil",
-      img: image,
+      title: "Imóvel é escasso – como bater o CDI investindo em imóveis?",
+      img: exame,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
+        "Investir em imóveis é uma estratégia robusta ao longo do tempo e supera consistentemente o CDI",
+      link: "https://exame.com/lideres-extraordinarios/governanca/imovel-e-escasso-como-bater-o-cdi-investindo-em-imoveis/", // Link para o segundo item
     },
     {
       id: 3,
-      title: "5 estratégias inovadoras",
-      img: image,
+      title: "Quer diversificar? Confira cinco dicas para investir em imóveis",
+      img: exame,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
+        "Saiba como diversificar seus investimentos com mais segurança através de imóveis.",
+      link: "https://exame.com/lideres-extraordinarios/financas/cinco-dicas-para-investir-em-imoveis/", // Link para o terceiro item
     },
   ];
 
@@ -51,7 +53,7 @@ const Notify = () => {
             <img src={item.img} alt={item.title} className="news-image" />
             <h3 className="news-title">{item.title}</h3>
             <p className="news-description">{item.description}</p>
-            <a href="#" className="news-link">
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="news-link">
               Ver notícia <FaArrowRight />
             </a>
           </div>

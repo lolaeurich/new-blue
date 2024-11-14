@@ -2,21 +2,50 @@ import "./style.css";
 import { useState, useEffect } from "react";
 import { FaArrowRight, FaArrowLeft, FaFastBackward, FaFastForward } from "react-icons/fa";
 import image from "../../assets/Notify/notify.png";
+import exame from "../../assets/exame.png";
+import ayalogo from "../../assets/ayalogo.jpg";
+import aya from "../../assets/aya4.png";
+import brain from "../../assets/brain.png";
 
 const NaMidiaCards = () => {
   // Define os itens dos cards
   const items = [
-    { id: 1, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 2, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 3, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 4, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 5, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 6, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 7, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 8, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 9, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 10, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
-    { id: 11, title: "5 dicas para investir em imóveis", img: image, description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non." },
+    { 
+      id: 1, 
+      title: "AYA RESIDENCES - Lançamento", 
+      img: aya, 
+      description: "Mais de 500 unidades vendidas, o AYA Residences é o maior sucesso imobiliário da cidade de Curitiba.",
+      link: "https://www.youtube.com/watch?v=6RnmDKzwYzw" // Link para o primeiro item
+    },
+    { 
+      id: 2, 
+      title: "Aya Residence: 90% vendido em 42 dias", 
+      img: brain, 
+      description: "Convidamos José Mario Marim Jr, CEO da Blue, e Luiz Brenner Rose, Diretor da Invespark.",
+      link: "https://www.youtube.com/watch?v=afgsSvPrgSg" // Link para o segundo item
+    },
+    { 
+      id: 3, 
+      title: "5 dicas para investir em imóveis", 
+      img: image, 
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
+      link: "https://exemplo3.com/noticia3" // Link para o terceiro item
+    },
+    { 
+      id: 4, 
+      title: "5 dicas para investir em imóveis", 
+      img: image, 
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
+      link: "https://exemplo4.com/noticia4" // Link para o quarto item
+    },
+    { 
+      id: 5, 
+      title: "5 dicas para investir em imóveis", 
+      img: image, 
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus hendrerit quam orci, quis lacinia magna posuere non.",
+      link: "https://exemplo5.com/noticia5" // Link para o quinto item
+    },
+    // Adicione os demais itens com links aqui...
   ];
 
   // Estado para controlar a página atual e itens por página
@@ -95,7 +124,8 @@ const NaMidiaCards = () => {
             <img src={item.img} alt={item.title} className="midia-card-image" />
             <h3 className="midia-card-title">{item.title}</h3>
             <p className="midia-card-description">{item.description}</p>
-            <a href="#" className="midia-card-link">
+            {/* Link para a notícia, com target="_blank" para abrir em nova aba */}
+            <a href={item.link} target="_blank" rel="noopener noreferrer" className="midia-card-link">
               Ver notícia <FaArrowRight />
             </a>
           </div>

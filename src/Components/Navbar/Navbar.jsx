@@ -50,7 +50,10 @@ function Nav() {
     navigate("/Aya");
   };
 
-
+  const handleArea = () => {
+    // Redireciona para um link externo
+    window.location.href = "https://portaldoinvestidor.blueempreendimentos.com.br/";
+  };
 
   const handleParceiro = () => {
     const telefone = "5541998813525"; // Substitua pelo número de telefone desejado
@@ -98,7 +101,7 @@ function Nav() {
             <li onClick={toggleEmpreendimentos} className="drop-empreendimentos">Empreendimentos <MdKeyboardArrowDown /></li>
             <li onClick={handleParceiro}>Quero ser um parceiro</li>
             <li className="sociais">
-              <button className="parceiro-btn"><img alt="" src={navicon}/>Área restrita</button>
+              <button className="parceiro-btn" onClick={handleArea} style={{cursor: "pointer"}}><img alt="" src={navicon}/>Área restrita</button>
             </li>
           </ul>
         </div>
@@ -117,7 +120,7 @@ function Nav() {
               <li onClick={handleParceiro}>Quero ser um parceiro</li>
             </ul>
             <div className="sociais">
-              <button className="parceiro-btn"><img alt="" src={navicon}/>Área restrita</button>
+              <button className="parceiro-btn" onClick={handleArea}><img alt="" src={navicon}/>Área restrita</button>
             </div>
           </div>
         )}

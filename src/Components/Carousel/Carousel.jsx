@@ -5,6 +5,25 @@ import { useNavigate } from "react-router-dom";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Carousel = ({ items }) => {
+
+    // Função para manipular o clique, com navegação baseada no ID
+    const handleItemClick = (id) => {
+      switch (id) {
+        case 1:
+          navigate("/Aya"); // Navega para a página "/Aya"
+          break;
+        case 2:
+          navigate("/Cena"); // Navega para a página "/Cena"
+          break;
+        case 3:
+          navigate("/HitHome"); // Navega para a página "/HitHome"
+          break;
+        default:
+          console.log("Ação para o item desconhecido");
+      }
+    };
+
+
   const carouselRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0); // Controla o índice do ponto ativo
   const itemsPerPage = 4; // Número de itens a serem exibidos por vez
@@ -61,8 +80,8 @@ const Carousel = ({ items }) => {
         </button>
         <div className="carousel" ref={carouselRef}>
         {items.map((item) => (
-          <div key={item.id} className="carousel-item">
-            <img src={item.img} alt={item.name} className="carousel-image" />
+          <div key={item.id} className="carousel-item"  onClick={() => handleItemClick(item.id)}>
+            <img src={item.img} alt={item.name} className="carousel-image" style={{cursor: "pointer"}}/>
             <p className="carousel-name">{item.name}</p>
             
             {/* Informações extras */}

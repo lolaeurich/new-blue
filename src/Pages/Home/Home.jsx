@@ -12,7 +12,13 @@ import Partners from "../../Components/Partners/Partners";
 import Notify from "../../Components/Notify/Notify";
 import Footer from "../../Components/Footer/Footer";
 
+import { useNavigate } from "react-router-dom"; // Importe o hook useNavigate para navegação
+
+
 const Home1 = () => {
+
+  const navigate = useNavigate(); // Crie uma instância do hook useNavigate
+
   const listCarrosel = [
     {
       id: 1,
@@ -57,6 +63,21 @@ const Home1 = () => {
       squareMeters: "200"
     },
   ];
+
+  const handleItemClick = (id) => {
+    // Lógica para cada item
+    alert(`Item com ID ${id} clicado!`);
+    // Aqui você pode adicionar diferentes comportamentos com base no id ou outro parâmetro
+    switch (id) {
+      case 1:
+        navigate("/Aya"); // Navega para a página "/Aya"
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+    }
+  };
 
   return (
     <div style={{ width: "100%" }}>

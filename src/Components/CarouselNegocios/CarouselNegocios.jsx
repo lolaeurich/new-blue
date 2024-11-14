@@ -3,8 +3,11 @@ import "./style.css";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import negocios1 from "../../assets/negocios1.png";
 import negocios2 from "../../assets/negocios2.png";
+import { useNavigate } from "react-router-dom";
+
 
 const CarouselNegocios = () => {
+  const navigate = useNavigate();
   const carouselRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0); // Controle de qual item está ativo
 
@@ -43,6 +46,10 @@ const CarouselNegocios = () => {
         className={`dot ${index === activeIndex ? "active" : ""}`}
       />
     ));
+  };
+
+  const handleAya = () => {
+    navigate("/Aya");
   };
 
   return (
